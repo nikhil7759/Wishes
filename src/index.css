@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import "tailwindcss";
+
 
 @font-face {
   font-family: 'National2Web';
@@ -16,9 +18,36 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Futura Book';
+  src: url('/font/futura-book-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/font/Jost-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/font/Jost-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --font-sans: 'avus', sans-serif;
   --font-heading: 'National2Web', sans-serif;
+  --font-futura: 'Futura Book', sans-serif;
+  --font-jost: 'Jost', sans-serif;
+  --font-display: 'Cormorant Garamond', serif;
 }
 
 :root {
@@ -71,4 +100,54 @@
   #social .button-icon {
     filter: invert(1) brightness(2);
   }
+}
+
+/* Custom styles for Services section */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.clip-flower {
+  clip-path: url(#flower-clip);
+  -webkit-clip-path: url(#flower-clip);
+}
+
+.clip-capsule {
+  clip-path: url(#capsule-clip);
+  -webkit-clip-path: url(#capsule-clip);
+}
+
+/* Float animation for premium vibe */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.animate-float-delayed-more {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 4s;
 }

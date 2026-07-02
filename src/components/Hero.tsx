@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
 
       {/* Content */}
       <div className="w-[75vh] relative z-10 text-left px-6  font-jost">
-        <h1 className=" text-3xl md:text-4xl text-[#000] mb-4 tracking-[-0.09rem] drop-shadow-md uppercase">
+        <h1 className=" text-3xl md:text-4xl text-[#83836e] mb-4 tracking-[-0.09rem] drop-shadow-md uppercase">
           Gourmet Sweets
         </h1>
         <p className="text-base text-[#141313] font-light font-jost drop-shadow">

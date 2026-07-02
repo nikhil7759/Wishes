@@ -7,11 +7,13 @@ import BuildYourBox from './components/BuildYourBox'
 import ArtisanalCollection from './components/ArtisanalCollection'
 import BoutiqueSection from './components/BoutiqueSection'
 import Footer from './components/Footer'
+import Preloader from './components/Preloader'
 import './App.css'
 
 function App() {
   return (
     <div className="min-h-screen bg-white">
+      <Preloader />
       <Navbar />
       <main>
         <Hero />

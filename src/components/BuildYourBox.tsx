@@ -3,14 +3,11 @@ import React from 'react';
 const BuildYourBox: React.FC = () => {
   return (
     <section
-      className="relative py-20 md:py-28 px-6 md:px-12 flex items-center justify-center select-none"
-      style={{
-        backgroundImage: "url('/Images/bg.jpg')",
-        backgroundRepeat: 'repeat',
-      }}
+      className="relative py-20 md:py-28 px-6 md:px-12 flex items-center justify-center select-none bg-[#d1b19a]"
+
     >
       {/* Centered White Card Container - "not too big neither small" */}
-      <div className="w-full max-w-4xl bg-[#faf6ee] shadow-xl py-14 px-8 md:px-16 text-center border border-gray-100 rounded-sm">
+      <div className="w-full max-w-4xl bg-[#f8f0e5] shadow-xl py-14 px-8 md:px-16 text-center border border-gray-100 rounded-sm">
 
         {/* Section Title */}
         <h2 className="font-jost font-light text-3xl md:text-[26px] tracking-[0.01rem] uppercase text-black mb-12">
@@ -77,7 +74,7 @@ const BuildYourBox: React.FC = () => {
         <div className="flex justify-center mt-6">
           <button
             type="button"
-            className="bg-[#c8c8ae] hover:bg-[#c8c8ae] text-black font-jost text-xs uppercase tracking-[0.2em] font-medium py-3 px-8 border border-[#c8c8ae] transition-all duration-300 active:scale-95 shadow-sm hover:shadow-md cursor-pointer rounded-sm"
+            className="bg-[#d1b19a] hover:bg-[#d1b19a] text-black font-jost text-xs uppercase tracking-[0.2em] font-medium py-3 px-8 border border-[#d1b19a] transition-all duration-300 active:scale-95 shadow-sm hover:shadow-md cursor-pointer rounded-sm"
           >
             Sign Me Up
           </button>

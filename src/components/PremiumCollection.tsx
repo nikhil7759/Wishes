@@ -36,7 +36,7 @@ const PremiumCollection: React.FC = () => {
   ];
 
   return (
-    <section className="bg-[#faf6ee] py-8 px-6 md:px-16 lg:px-24">
+    <section className="bg-[#f8f0e5] py-8 px-6 md:px-16 lg:px-24">
       <div className="max-w-7xl mx-auto">
         {/* Section Heading */}
         <div className="text-center mb-12">

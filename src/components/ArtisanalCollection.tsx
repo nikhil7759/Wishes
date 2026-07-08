@@ -13,35 +13,35 @@ const collections: CollectionItem[] = [
     id: 1,
     title: 'Healthy Namkeen',
     description: 'A refreshing combination of sweet lavender, pastel roses, and fresh morning garden herbs.',
-    imageUrl: '/Images/collection1.jpg',
+    imageUrl: '/Images/sweets/1.png',
     link: '/after-the-rain',
   },
   {
     id: 2,
     title: 'Chocolate',
     description: 'Earthy herbal flavors paired with delicate wild chamomile, daisies, and seasonal white blooms.',
-    imageUrl: '/Images/collection2.jpg',
+    imageUrl: '/Images/sweets/2.png',
     link: '/barefoot-on-grass',
   },
   {
     id: 3,
     title: 'Hampers',
     description: 'Rich gourmet sweets nestled amidst blue delphinium, peach ranunculus, and wild meadow branches.',
-    imageUrl: '/Images/collection3.jpg',
+    imageUrl: '/Images/sweets/3.png',
     link: '/dragonflies-hide',
   },
   {
     id: 4,
     title: 'Dry Fruits',
     description: 'Warm sun-kissed honey lollipops, apricot nectar, and delicate dried marigold petals.',
-    imageUrl: '/Images/collection4.jpg',
+    imageUrl: '/Images/sweets/4.png',
     link: '/golden-hour-dreams',
   },
 ];
 
 const ArtisanalCollection: React.FC = () => {
   return (
-    <section className="bg-[#faf6ee] py-16 px-6 md:px-16 lg:px-24 select-none">
+    <section className="bg-[#f8f0e5] py-16 px-6 md:px-16 lg:px-24 select-none">
       <div className="max-w-7xl mx-auto">
 
         {/* Section Heading matching Premium Collection */}
@@ -59,19 +59,14 @@ const ArtisanalCollection: React.FC = () => {
               href={item.link}
               className="group flex flex-col items-center focus:outline-none"
             >
-              {/* Arched Outline Wrapper */}
-              <div className="w-full p-3 border border-[#b2a496]/30 rounded-t-full aspect-[4/5] flex items-center justify-center bg-transparent transition-all duration-300 group-hover:border-[#b2a496]/60 shadow-sm">
-
-                {/* Arched Image Container */}
-                <div className="w-full h-full overflow-hidden rounded-t-full bg-[#faf6ee]">
-                  <img
-                    src={item.imageUrl}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-
+              {/* Image Container */}
+              <div className="w-full aspect-[4/5] overflow-hidden bg-[#d1b19a] shadow-md transition-shadow duration-300 group-hover:shadow-xl">
+                <img
+                  src={item.imageUrl}
+                  alt={item.title}
+                  className="w-full h-full object-contain transition-transform duration-700 ease-out group-hover:scale-105"
+                  loading="lazy"
+                />
               </div>
 
               {/* Title using premium angled quotes */}
@@ -92,7 +87,7 @@ const ArtisanalCollection: React.FC = () => {
         <div className="flex justify-center mt-16">
           <button
             type="button"
-            className="bg-[#c8c8ae] hover:bg-[#c8c8ae] text-black font-jost text-xs uppercase tracking-[0.2em] font-medium py-3 px-8 border border-[#c8c8ae] transition-all duration-300 active:scale-95 shadow-sm hover:shadow-md cursor-pointer rounded-sm"
+            className="bg-[#d1b19a] hover:bg-[#d1b19a] text-black font-jost text-xs uppercase tracking-[0.2em] font-medium py-3 px-8 border border-[#d1b19a] transition-all duration-300 active:scale-95 shadow-sm hover:shadow-md cursor-pointer rounded-sm"
           >
             Explore All
           </button>

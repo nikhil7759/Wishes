@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <nav className="w-full bg-white/90 backdrop-blur-md font-jost font-normal border-b border-gray-100 sticky top-0 z-30 px-6 md:px-16 pt-4 shadow-sm">
+      <nav className="w-full bg-[#f8f0e5] font-jost font-normal border-b border-gray-100 sticky top-0 z-30 px-6 md:px-16 pt-4 shadow-sm">
         <div className=" flex flex-col gap-4">
           {/* Row 1: Left Links/Hamburger, Center Logo, Right Icons */}
           <div className="flex items-center justify-between">
@@ -13,8 +14,8 @@ const Navbar: React.FC = () => {
             <div className="flex-1 flex items-center justify-start">
               {/* Desktop Extra Links */}
               <div className="hidden md:flex items-center gap-6 text-[14px] tracking-[0.04rem] text-black capitalize">
-                <a href="/about" className="hover:text-black transition-colors">The House</a>
-                <a href="/locations" className="hover:text-black transition-colors">Our Addresses</a>
+                <Link to="/about" className="hover:text-black transition-colors">The House</Link>
+                <Link to="/locations" className="hover:text-black transition-colors">Our Addresses</Link>
               </div>
 
               {/* Mobile Hamburger button */}
@@ -31,9 +32,9 @@ const Navbar: React.FC = () => {
 
             {/* Center Area: Logo */}
             <div className="flex-shrink-0 flex justify-center">
-              <a href="/">
+              <Link to="/">
                 <img src="/logo/wishes%20logo.png" alt="Wishes Logo" className="h-12 w-auto object-contain brightness-0" />
-              </a>
+              </Link>
             </div>
 
             {/* Right Area: Desktop Icons & Mobile Icons */}
@@ -58,13 +59,13 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Row 2: Desktop Main Menu */}
-          <div className="hidden md:flex items-center justify-center gap-8 pb-4 pt-2 text-[14px] uppercase tracking-[-0.01rem] text-black border-t border-gray-50">
-            <a href="/" className="hover:text-black transition-colors">Home</a>
-            <a href="/shop" className="hover:text-black transition-colors">Shop</a>
-            <a href="/bulk-order" className="hover:text-black transition-colors">Bulk Order</a>
-            <a href="/gifting" className="hover:text-black transition-colors">Gifting</a>
-            <a href="/contact" className="hover:text-black transition-colors">Contact</a>
-            <a href="/order-online" className="hover:text-black transition-colors">Order Online</a>
+          <div className="hidden md:flex items-center justify-center gap-8 pb-4 pt-2 text-[14px] uppercase tracking-[-0.01rem] text-black">
+            <Link to="/" className="hover:text-black transition-colors">Home</Link>
+            <Link to="/shop" className="hover:text-black transition-colors">Shop</Link>
+            <Link to="/bulk-order" className="hover:text-black transition-colors">Bulk Order</Link>
+            <Link to="/gifting" className="hover:text-black transition-colors">Gifting</Link>
+            <Link to="/contact" className="hover:text-black transition-colors">Contact</Link>
+            <Link to="/order-online" className="hover:text-black transition-colors">Order Online</Link>
           </div>
         </div>
       </nav>
@@ -96,14 +97,14 @@ const Navbar: React.FC = () => {
 
         {/* Drawer Links */}
         <div className="flex flex-col px-8 gap-6 text-[16px] uppercase tracking-wider text-black font-jost">
-          <a href="/about" className="hover:text-gray-600 transition-colors py-2 border-b border-gray-100" onClick={() => setIsOpen(false)}>The House</a>
-          <a href="/locations" className="hover:text-gray-600 transition-colors py-2 border-b border-gray-100" onClick={() => setIsOpen(false)}>Our Addresses</a>
-          <a href="/" className="hover:text-gray-600 transition-colors py-2 border-b border-gray-100" onClick={() => setIsOpen(false)}>Home</a>
-          <a href="/shop" className="hover:text-gray-600 transition-colors py-2 border-b border-gray-100" onClick={() => setIsOpen(false)}>Shop</a>
-          <a href="/bulk-order" className="hover:text-gray-600 transition-colors py-2 border-b border-gray-100" onClick={() => setIsOpen(false)}>Bulk Order</a>
-          <a href="/gifting" className="hover:text-gray-600 transition-colors py-2 border-b border-gray-100" onClick={() => setIsOpen(false)}>Gifting</a>
-          <a href="/contact" className="hover:text-gray-600 transition-colors py-2 border-b border-gray-100" onClick={() => setIsOpen(false)}>Contact</a>
-          <a href="/order-online" className="hover:text-gray-600 transition-colors py-2" onClick={() => setIsOpen(false)}>Order Online</a>
+          <Link to="/about" className="hover:text-gray-600 transition-colors py-2 border-b border-gray-100" onClick={() => setIsOpen(false)}>The House</Link>
+          <Link to="/locations" className="hover:text-gray-600 transition-colors py-2 border-b border-gray-100" onClick={() => setIsOpen(false)}>Our Addresses</Link>
+          <Link to="/" className="hover:text-gray-600 transition-colors py-2 border-b border-gray-100" onClick={() => setIsOpen(false)}>Home</Link>
+          <Link to="/shop" className="hover:text-gray-600 transition-colors py-2 border-b border-gray-100" onClick={() => setIsOpen(false)}>Shop</Link>
+          <Link to="/bulk-order" className="hover:text-gray-600 transition-colors py-2 border-b border-gray-100" onClick={() => setIsOpen(false)}>Bulk Order</Link>
+          <Link to="/gifting" className="hover:text-gray-600 transition-colors py-2 border-b border-gray-100" onClick={() => setIsOpen(false)}>Gifting</Link>
+          <Link to="/contact" className="hover:text-gray-600 transition-colors py-2 border-b border-gray-100" onClick={() => setIsOpen(false)}>Contact</Link>
+          <Link to="/order-online" className="hover:text-gray-600 transition-colors py-2" onClick={() => setIsOpen(false)}>Order Online</Link>
         </div>
       </div>
     </>

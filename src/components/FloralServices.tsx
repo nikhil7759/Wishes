@@ -2,7 +2,7 @@ import React from 'react';
 
 const FloralServices: React.FC = () => {
   return (
-    <section className="relative bg-[#c8c8ae] pt-24 pb-28 px-6 md:px-12 lg:px-24 overflow-hidden">
+    <section className="relative bg-[#d1b19a] pt-24 pb-28 px-6 md:px-12 lg:px-24 overflow-hidden">
       {/* SVG Clip Path Definitions */}
       <svg className="absolute w-0 h-0" width="0" height="0">
         <defs>
@@ -41,20 +41,20 @@ const FloralServices: React.FC = () => {
             {/* <div className="mt-8">
               <a
                 href="/about"
-                className="group inline-flex items-center gap-2 font-jost uppercase tracking-[0.15em] text-[13px] md:text-[14px] text-[#2d3319] font-medium transition-colors duration-300 hover:text-[#faf6ee]"
+                className="group inline-flex items-center gap-2 font-jost uppercase tracking-[0.15em] text-[13px] md:text-[14px] text-[#2d3319] font-medium transition-colors duration-300 hover:text-[#f8f0e5]"
               >
                 <span>Discover Our Story</span>
                 <span className="inline-block transition-transform duration-300 group-hover:translate-x-1.5">
                   →
                 </span>
               </a>
-              <div className="h-[1px] w-full bg-[#2d3319] mt-1 transition-transform duration-300 origin-left scale-x-100 group-hover:scale-x-110 group-hover:bg-[#faf6ee]" />
+              <div className="h-[1px] w-full bg-[#2d3319] mt-1 transition-transform duration-300 origin-left scale-x-100 group-hover:scale-x-110 group-hover:bg-[#f8f0e5]" />
             </div> */}
           </div>
 
           {/* RIGHT COLUMN: LARGE IMAGE */}
           <div className="md:col-span-6 flex justify-center items-center animate-float">
-            <div className="relative w-80 h-80 sm:w-96 sm:h-96 md:w-full md:aspect-square max-w-[480px] lg:max-w-[500px] overflow-hidden bg-[#faf6ee]/10 group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow duration-500 ">
+            <div className="relative w-80 h-80 sm:w-96 sm:h-96 md:w-full md:aspect-square max-w-[480px] lg:max-w-[500px] overflow-hidden bg-[#f8f0e5]/10 group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow duration-500 ">
               {/* Soft border overlay for visual depth */}
               <div className="absolute inset-0 pointer-events-none z-10" />
 
@@ -73,7 +73,7 @@ const FloralServices: React.FC = () => {
       <div
         className="absolute bottom-0 left-0 w-full h-[20px] bg-repeat-x z-10"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 16' fill='%23faf6ee'%3E%3Cpath d='M 0 16 Q 10 0, 20 16 Q 30 0, 40 16 Z'/%3E%3C/svg%3E")`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 16' fill='%23f8f0e5'%3E%3Cpath d='M 0 16 Q 10 0, 20 16 Q 30 0, 40 16 Z'/%3E%3C/svg%3E")`,
           // backgroundSize: '40px 18px',
         }}
       />

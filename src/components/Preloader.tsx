@@ -56,9 +56,8 @@ const Preloader: React.FC = () => {
 
   return (
     <div
-      className={`fixed inset-0 z-50 bg-[#faf6ee] flex flex-col items-center justify-center transition-all duration-700 ease-in-out select-none ${
-        isFadingOut ? 'opacity-0 pointer-events-none' : 'opacity-100'
-      }`}
+      className={`fixed inset-0 z-50 bg-white flex flex-col items-center justify-center transition-all duration-700 ease-in-out select-none ${isFadingOut ? 'opacity-0 pointer-events-none' : 'opacity-100'
+        }`}
     >
       <div className="flex flex-col items-center max-w-xs text-center">
         {/* Wishes Logo with subtle pulse animation */}

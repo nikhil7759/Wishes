@@ -8,14 +8,14 @@ interface SliderItem {
 }
 
 const items: SliderItem[] = [
-  { id: 1, title: 'Wedding Special Box', imageUrl: '/Images/collection1.jpg', link: '/wedding-special' },
-  { id: 2, title: 'Luxury Birthday Hamper', imageUrl: '/Images/collection3.jpg', link: '/birthday-wishes' },
-  { id: 3, title: 'Corporate Luxury Basket', imageUrl: '/Images/collection4.jpg', link: '/corporate-special' },
-  { id: 4, title: 'Anniversary Gift Box', imageUrl: '/Images/collection2.jpg', link: '/anniversary-special' },
-  { id: 5, title: 'Royal Dry Fruit Gift Hamper', imageUrl: '/Images/collection1.jpg', link: '/wedding-special' },
-  { id: 6, title: 'Kaju Katli Special', imageUrl: '/Images/collection3.jpg', link: '/birthday-wishes' },
-  { id: 7, title: 'Deluxe Celebrations Assortment', imageUrl: '/Images/collection4.jpg', link: '/corporate-special' },
-  { id: 8, title: 'Classic Premium Hamper', imageUrl: '/Images/collection2.jpg', link: '/anniversary-special' },
+  { id: 1, title: 'Wedding Special Box', imageUrl: '/Images/pic1.jpg', link: '/wedding-special' },
+  { id: 2, title: 'Luxury Birthday Hamper', imageUrl: '/Images/pic2.jpg', link: '/birthday-wishes' },
+  { id: 3, title: 'Corporate Luxury Basket', imageUrl: '/Images/pic3.jpg', link: '/corporate-special' },
+  { id: 4, title: 'Anniversary Gift Box', imageUrl: '/Images/pic4.jpg', link: '/anniversary-special' },
+  { id: 5, title: 'Royal Dry Fruit Gift Hamper', imageUrl: '/Images/pic5.jpg', link: '/wedding-special' },
+  { id: 6, title: 'Kaju Katli Special', imageUrl: '/Images/pic6.jpg', link: '/birthday-wishes' },
+  { id: 7, title: 'Deluxe Celebrations Assortment', imageUrl: '/Images/pic7.jpg', link: '/corporate-special' },
+  { id: 8, title: 'Classic Premium Hamper', imageUrl: '/Images/pic8.jpg', link: '/anniversary-special' },
 ];
 
 const TopSellingSlider: React.FC = () => {
@@ -83,7 +83,7 @@ const TopSellingSlider: React.FC = () => {
   };
 
   return (
-    <section className="bg-[#faf6ee] py-16 px-6 md:px-16 lg:px-24 relative overflow-hidden select-none">
+    <section className="bg-[#f8f0e5] py-16 px-6 md:px-16 lg:px-24 relative overflow-hidden select-none">
       <div className="max-w-7xl mx-auto">
 
         {/* Section Heading */}

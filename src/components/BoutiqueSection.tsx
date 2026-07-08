@@ -12,7 +12,7 @@ const BoutiqueSection: React.FC = () => {
       <div className="absolute inset-0 bg-black/15 pointer-events-none" />
 
       {/* Right Aligned Content Overlay Card */}
-      <div className="relative z-10 w-full max-w-xl bg-[#faf6ee] p-10 md:p-14  md:mr-16 lg: flex flex-col items-start text-left select-none ">
+      <div className="relative z-10 w-full max-w-xl bg-[#f8f0e5] p-10 md:p-14  md:mr-16 lg: flex flex-col items-start text-left select-none ">
 
         {/* Section Heading matching Jost size & tracking of About Us */}
         <h2 className="font-jost font-light text-3xl md:text-[26px] tracking-[0.01rem] uppercase text-black mb-4">
@@ -30,7 +30,7 @@ const BoutiqueSection: React.FC = () => {
         {/* Call to Action Button matching BuildYourBox */}
         <button
           type="button"
-          className="bg-[#c8c8ae] hover:bg-[#c8c8ae] text-black font-jost text-xs uppercase tracking-[0.2em] font-medium py-3.5 px-8 border border-[#c8c8ae] transition-all duration-300 active:scale-95 shadow-sm hover:shadow-md cursor-pointer rounded-sm mt-6"
+          className="bg-[#d1b19a] hover:bg-[#d1b19a] text-black font-jost text-xs uppercase tracking-[0.2em] font-medium py-3.5 px-8 border border-[#d1b19a] transition-all duration-300 active:scale-95 shadow-sm hover:shadow-md cursor-pointer rounded-sm mt-6"
         >
           Visit Us
         </button>

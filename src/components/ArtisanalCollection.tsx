@@ -46,8 +46,8 @@ const ArtisanalCollection: React.FC = () => {
 
         {/* Section Heading matching Premium Collection */}
         <div className="text-center mb-16">
-          <h2 className="font-jost font-light text-3xl md:text-[26px] tracking-[0.01rem] uppercase text-black">
-            Artisanal Collection
+          <h2 className="font-sloop font-light text-3xl md:text-[50px] capitalize text-[#5a4d41]">
+            Artisan Collection
           </h2>
         </div>
 
@@ -75,9 +75,7 @@ const ArtisanalCollection: React.FC = () => {
               </h3>
 
               {/* Description */}
-              <p className="mt-2 font-jost font-light text-[13px] md:text-[14px] text-gray-500 leading-relaxed text-center">
-                {item.description}
-              </p>
+
 
             </a>
           ))}

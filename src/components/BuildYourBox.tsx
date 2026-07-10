@@ -3,15 +3,15 @@ import React from 'react';
 const BuildYourBox: React.FC = () => {
   return (
     <section
-      className="relative py-20 md:py-28 px-6 md:px-12 flex items-center justify-center select-none bg-[#d1b19a]"
+      className="relative py-20 md:py-28 px-6 md:px-12 flex items-center justify-center select-none bg-[#f4c3c0]"
 
     >
       {/* Centered White Card Container - "not too big neither small" */}
       <div className="w-full max-w-4xl bg-[#f8f0e5] shadow-xl py-14 px-8 md:px-16 text-center border border-gray-100 rounded-sm">
 
         {/* Section Title */}
-        <h2 className="font-jost font-light text-3xl md:text-[26px] tracking-[0.01rem] uppercase text-black mb-12">
-          Build your box
+        <h2 className="font-sloop font-light text-3xl md:text-[50px] capitalize text-[#5a4d41]">
+          Build Your Box
         </h2>
 
         {/* Curation Steps (3-column layout) */}

@@ -12,15 +12,26 @@ const BoutiqueSection: React.FC = () => {
       <div className="absolute inset-0 bg-black/15 pointer-events-none" />
 
       {/* Right Aligned Content Overlay Card */}
-      <div className="relative z-10 w-full max-w-xl bg-[#f8f0e5] p-10 md:p-14  md:mr-16 lg: flex flex-col items-start text-left select-none ">
+      <div
+        className="relative z-10 w-full max-w-xl md:mr-16 flex flex-col items-start text-left select-none"
+        style={{
+          background: 'rgba(255,255,255,0.18)',
+          backdropFilter: 'blur(20px)',
+          WebkitBackdropFilter: 'blur(20px)',
+          borderRadius: '24px',
+          border: '1px solid rgba(255,255,255,0.25)',
+          boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
+          padding: 'clamp(28px, 4vw, 48px)',
+        }}
+      >
 
-        {/* Section Heading matching Jost size & tracking of About Us */}
-        <h2 className="font-jost font-light text-3xl md:text-[26px] tracking-[0.01rem] uppercase text-black mb-4">
+        <h2 className="font-sloop font-normal leading-[1.15] tracking-[2px] mb-5"
+          style={{ fontSize: 'clamp(36px, 4.5vw, 45px)', color: '#fbede3' }}>
           Explore Our Boutique
         </h2>
 
         {/* Narrative Description */}
-        <div className="space-y-4 font-jost font-light text-[15px] md:text-[16px] leading-relaxed text-black py-2">
+        <div className="space-y-4 font-jost font-light text-[15px] md:text-[16px] leading-relaxed text-[#fbede3] py-2">
           <p>
             Wishes by Om Sweets invites you to step inside our boutique and experience the magic of luxury gifting first-hand. Located in the heart of West London, our boutique is a sensory haven featuring a beautifully curated collection of premium sweets, custom-crafted hampers, and stunning floral arrangements.
           </p>

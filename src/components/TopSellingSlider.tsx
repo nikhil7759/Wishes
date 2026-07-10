@@ -88,7 +88,7 @@ const TopSellingSlider: React.FC = () => {
 
         {/* Section Heading */}
         <div className="text-center mb-12">
-          <h2 className="font-jost font-light text-3xl md:text-[26px] tracking-[0.01rem] uppercase text-black">
+          <h2 className="font-sloop font-light text-3xl md:text-[50px] capitalize text-[#5a4d41]">
             Top Selling Items
           </h2>
         </div>
@@ -115,7 +115,7 @@ const TopSellingSlider: React.FC = () => {
                 >
                   <a
                     href={item.link}
-                    className="group flex flex-col items-center focus:outline-none"
+                    className="group flex flex-col items-start focus:outline-none"
                   >
                     {/* Image container matching PremiumCollection */}
                     <div className="w-full aspect-[4/5] overflow-hidden bg-gray-100 shadow-md transition-shadow duration-300 group-hover:shadow-xl">
@@ -128,7 +128,7 @@ const TopSellingSlider: React.FC = () => {
                     </div>
 
                     {/* Caption */}
-                    <h4 className="mt-6 font-jost font-light text-[15px] md:text-[16px] text-black  tracking-[0.01rem] text-center transition-colors duration-300 group-hover:text-black capitalize">
+                    <h4 className="mt-6 font-jost font-light text-[15px] md:text-[16px] text-black  tracking-[0.01rem] text-center transition-colors duration-300 group-hover:text-black uppercase">
                       {item.title}
                     </h4>
                   </a>

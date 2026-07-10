@@ -2,7 +2,7 @@ import React from 'react';
 
 const FloralServices: React.FC = () => {
   return (
-    <section className="relative bg-[#d1b19a] pt-24 pb-28 px-6 md:px-12 lg:px-24 overflow-hidden">
+    <section className="relative bg-[#f4c3c0] pt-24 pb-28 px-6 md:px-12 lg:px-24 overflow-hidden">
       {/* SVG Clip Path Definitions */}
       <svg className="absolute w-0 h-0" width="0" height="0">
         <defs>
@@ -23,8 +23,8 @@ const FloralServices: React.FC = () => {
 
 
             {/* Heading */}
-            <h2 className="font-jost  text-[38px] sm:text-[46px] md:text-[40px] lg:text-[40px] text-black  mb-6 font-normal tracking-[-1.4px] max-w-xl">
-              ABOUT US
+            <h2 className="font-sloop  text-[38px] sm:text-[46px] md:text-[40px] lg:text-[60px] text-black  mb-6 font-normal  max-w-xl">
+              About Us
             </h2>
 
             {/* Body Paragraphs */}

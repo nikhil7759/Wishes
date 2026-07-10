@@ -1,110 +1,118 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+  
+  const [scrolled, setScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Hide on scroll down, show on scroll up
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      
+      setScrolled(currentScrollY > 50);
+      setLastScrollY(currentScrollY);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
+  // Transparent at the very top of home page, otherwise white background
+  const isTransparent = isHome && !scrolled;
+  const navBg = isTransparent ? 'bg-transparent text-white' : 'bg-[#f8f0e5] text-[#5a4d41] shadow-md';
+  const transformClass = isVisible ? 'translate-y-0' : '-translate-y-full';
+  const logoFilter = isTransparent ? 'brightness-0 invert' : 'brightness-0';
+
+  const navLinks = [
+    { to: '/', label: 'Home' },
+    { to: '/shop', label: 'Shop' },
+    { to: '/bulk-order', label: 'Bulk Order' },
+    { to: '/gifting', label: 'Gifting' },
+    { to: '/contact', label: 'Contact' },
+    { to: '/order-online', label: 'Order Online' },
+  ];
 
   return (
     <>
-      <nav className="w-full bg-[#f8f0e5] font-jost font-normal border-b border-gray-100 sticky top-0 z-30 px-6 md:px-16 pt-4 shadow-sm">
-        <div className=" flex flex-col gap-4">
-          {/* Row 1: Left Links/Hamburger, Center Logo, Right Icons */}
-          <div className="flex items-center justify-between">
-            {/* Left Area: Desktop Extra Links & Mobile Hamburger */}
-            <div className="flex-1 flex items-center justify-start">
-              {/* Desktop Extra Links */}
-              <div className="hidden md:flex items-center gap-6 text-[14px] tracking-[0.04rem] text-black capitalize">
-                <Link to="/about" className="hover:text-black transition-colors">The House</Link>
-                <Link to="/locations" className="hover:text-black transition-colors">Our Addresses</Link>
-              </div>
-
-              {/* Mobile Hamburger button */}
-              <button
-                onClick={() => setIsOpen(true)}
-                className="md:hidden text-black focus:outline-none p-2"
-                aria-label="Open Menu"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
-            </div>
-
-            {/* Center Area: Logo */}
-            <div className="flex-shrink-0 flex justify-center">
-              <Link to="/">
-                <img src="/logo/wishes%20logo.png" alt="Wishes Logo" className="h-12 w-auto object-contain brightness-0" />
+      <nav className={`w-full fixed top-0 z-50 px-6 md:px-12 py-6 flex items-center justify-between font-jost uppercase tracking-[0.1em] text-[12px] md:text-[13px] transition-all duration-300 ${navBg} ${transformClass}`}>
+        {/* Left Area */}
+        <div className="flex items-center gap-5 xl:gap-6 flex-1">
+          {/* Mobile Hamburger */}
+          <button onClick={() => setIsOpen(true)} className="lg:hidden focus:outline-none hover:opacity-70 transition-opacity flex items-center gap-2">
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 9h16M4 15h16" />
+            </svg>
+          </button>
+          
+          {/* Desktop Nav Links */}
+          <div className="hidden lg:flex items-center gap-5 xl:gap-6">
+            {navLinks.slice(0, 3).map((link) => (
+              <Link key={link.to} to={link.to} className="hover:opacity-70 transition-opacity whitespace-nowrap">
+                {link.label}
               </Link>
-            </div>
-
-            {/* Right Area: Desktop Icons & Mobile Icons */}
-            <div className="flex-1 flex items-center justify-end gap-6 text-gray-500">
-              {/* Search (Desktop only) */}
-              <button className="hidden md:block hover:text-black transition-colors p-1" aria-label="Search">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.602 10.602z" />
-                </svg>
-              </button>
-
-              {/* Help/Contact (Desktop only) */}
-              <a href="/contact" className="hidden md:block hover:text-black transition-colors p-1" aria-label="Help">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                </svg>
-              </a>
-
-              {/* Account (Desktop only) */}
-
-            </div>
+            ))}
           </div>
+        </div>
 
-          {/* Row 2: Desktop Main Menu */}
-          <div className="hidden md:flex items-center justify-center gap-8 pb-4 pt-2 text-[14px] uppercase tracking-[-0.01rem] text-black">
-            <Link to="/" className="hover:text-black transition-colors">Home</Link>
-            <Link to="/shop" className="hover:text-black transition-colors">Shop</Link>
-            <Link to="/bulk-order" className="hover:text-black transition-colors">Bulk Order</Link>
-            <Link to="/gifting" className="hover:text-black transition-colors">Gifting</Link>
-            <Link to="/contact" className="hover:text-black transition-colors">Contact</Link>
-            <Link to="/order-online" className="hover:text-black transition-colors">Order Online</Link>
+        {/* Center Logo */}
+        <div className="flex-1 flex justify-center items-center">
+          <Link to="/" className="flex flex-col items-center">
+            <img src="/logo/wishes%20logo.png" alt="Wishes Logo" className={`h-10 md:h-15 w-auto object-contain transition-all duration-300 ${logoFilter}`} />
+            <span className="mt-1 text-[8px] md:text-[9px] tracking-[0.3em]">By Om Sweets</span>
+          </Link>
+        </div>
+
+        {/* Right Area */}
+        <div className="flex items-center justify-end gap-5 xl:gap-6 flex-1">
+          {/* Desktop Nav Links */}
+          <div className="hidden lg:flex items-center gap-5 xl:gap-6">
+            {navLinks.slice(3, 6).map((link) => (
+              <Link key={link.to} to={link.to} className="hover:opacity-70 transition-opacity whitespace-nowrap">
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </nav>
 
       {/* Backdrop overlay */}
       <div
-        className={`fixed inset-0 bg-black/40 backdrop-blur-sm z-40 md:hidden transition-opacity duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-          }`}
+        className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] transition-opacity duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
         onClick={() => setIsOpen(false)}
       />
 
       {/* Side Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-[280px] bg-white z-50 md:hidden shadow-2xl transition-transform duration-300 ease-out transform ${isOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
+        className={`fixed top-0 left-0 h-full w-[300px] bg-[#1a0e05] text-white z-[70] shadow-2xl transition-transform duration-300 ease-out transform ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
       >
-        {/* Close Button inside Drawer */}
+        {/* Close Button */}
         <div className="flex justify-end p-6">
-          <button
-            onClick={() => setIsOpen(false)}
-            className="text-black focus:outline-none p-2"
-            aria-label="Close Menu"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          <button onClick={() => setIsOpen(false)} className="focus:outline-none hover:opacity-70 transition-opacity p-2">
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
 
         {/* Drawer Links */}
-        <div className="flex flex-col px-8 gap-6 text-[16px] uppercase tracking-wider text-black font-jost">
-          <Link to="/about" className="hover:text-gray-600 transition-colors py-2 border-b border-gray-100" onClick={() => setIsOpen(false)}>The House</Link>
-          <Link to="/locations" className="hover:text-gray-600 transition-colors py-2 border-b border-gray-100" onClick={() => setIsOpen(false)}>Our Addresses</Link>
-          <Link to="/" className="hover:text-gray-600 transition-colors py-2 border-b border-gray-100" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link to="/shop" className="hover:text-gray-600 transition-colors py-2 border-b border-gray-100" onClick={() => setIsOpen(false)}>Shop</Link>
-          <Link to="/bulk-order" className="hover:text-gray-600 transition-colors py-2 border-b border-gray-100" onClick={() => setIsOpen(false)}>Bulk Order</Link>
-          <Link to="/gifting" className="hover:text-gray-600 transition-colors py-2 border-b border-gray-100" onClick={() => setIsOpen(false)}>Gifting</Link>
-          <Link to="/contact" className="hover:text-gray-600 transition-colors py-2 border-b border-gray-100" onClick={() => setIsOpen(false)}>Contact</Link>
-          <Link to="/order-online" className="hover:text-gray-600 transition-colors py-2" onClick={() => setIsOpen(false)}>Order Online</Link>
+        <div className="flex flex-col px-10 gap-6 text-[15px] uppercase tracking-[0.15em] font-jost font-light">
+          {navLinks.map((link) => (
+            <Link key={link.to} to={link.to} className="hover:text-[#d1b19a] transition-colors py-2 border-b border-white/10" onClick={() => setIsOpen(false)}>
+              {link.label}
+            </Link>
+          ))}
         </div>
       </div>
     </>

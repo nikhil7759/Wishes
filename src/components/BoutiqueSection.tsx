@@ -41,7 +41,7 @@ const BoutiqueSection: React.FC = () => {
         {/* Call to Action Button matching BuildYourBox */}
         <button
           type="button"
-          className="bg-[#d1b19a] hover:bg-[#d1b19a] text-black font-jost text-xs uppercase tracking-[0.2em] font-medium py-3.5 px-8 border border-[#d1b19a] transition-all duration-300 active:scale-95 shadow-sm hover:shadow-md cursor-pointer rounded-sm mt-6"
+          className="bg-[#d1b19a] hover:bg-[#d1b19a] text-black font-jost text-xs uppercase  font-medium py-3.5 px-8 border border-[#d1b19a] transition-all duration-300 active:scale-95 shadow-sm hover:shadow-md cursor-pointer rounded-sm mt-6"
         >
           Visit Us
         </button>

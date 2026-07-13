@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface CollectionItem {
   id: number;
@@ -57,10 +58,10 @@ const ArtisanalCollection: React.FC = () => {
             <a
               key={item.id}
               href={item.link}
-              className="group flex flex-col items-center focus:outline-none"
+              className="group flex flex-col items-start focus:outline-none"
             >
               {/* Image Container */}
-              <div className="w-full aspect-[4/5] overflow-hidden bg-[#d1b19a] shadow-md transition-shadow duration-300 group-hover:shadow-xl">
+              <div className="w-full aspect-[4/5] overflow-hidden bg-[#f4c3c0] shadow-md transition-shadow duration-300 group-hover:shadow-xl">
                 <img
                   src={item.imageUrl}
                   alt={item.title}
@@ -70,7 +71,7 @@ const ArtisanalCollection: React.FC = () => {
               </div>
 
               {/* Title using premium angled quotes */}
-              <h3 className="mt-6 font-jost font-light text-[16px] md:text-[16px] text-black capitalize tracking-[0.01rem] text-center transition-colors duration-300 group-hover:text-black">
+              <h3 className="mt-6 font-jost font-light text-[16px] md:text-[16px] text-black capitalize tracking-[0.01rem] text-left w-full transition-colors duration-300 group-hover:text-black">
                 {item.title}
               </h3>
 
@@ -83,12 +84,12 @@ const ArtisanalCollection: React.FC = () => {
 
         {/* Centered CTA Button matching BuildYourBox */}
         <div className="flex justify-center mt-16">
-          <button
-            type="button"
-            className="bg-[#d1b19a] hover:bg-[#d1b19a] text-black font-jost text-xs uppercase tracking-[0.2em] font-medium py-3 px-8 border border-[#d1b19a] transition-all duration-300 active:scale-95 shadow-sm hover:shadow-md cursor-pointer rounded-sm"
+          <Link
+            to="/shop"
+            className="inline-block bg-[#d1b19a] hover:bg-[#d1b19a] text-[#5a4d41] font-jost text-xs uppercase font-medium py-3 px-8 border border-[#d1b19a] transition-all duration-300 active:scale-95 shadow-sm hover:shadow-md cursor-pointer rounded-sm text-center"
           >
             Explore All
-          </button>
+          </Link>
         </div>
 
       </div>

@@ -3,7 +3,7 @@ import ShopSection from '../components/ShopSection';
 
 const ShopPage: React.FC = () => {
   return (
-    <div className="min-h-screen  pt-10 bg-[#d1b19a]">
+    <div className="min-h-screen  mt-34 bg-[#f8f0e5]">
       <ShopSection />
     </div>
   );

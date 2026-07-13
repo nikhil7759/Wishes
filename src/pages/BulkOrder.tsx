@@ -23,119 +23,74 @@ const BulkOrder: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8f0e5] pt-10 pb-20 font-jost">
-      {/* Hero Section */}
-      <div className="max-w-7xl mx-auto px-6 md:px-16 text-center mb-16">
-        <h1 className="text-3xl md:text-5xl text-[#2b4c3b] mb-4 tracking-wide uppercase">
-          Celebrate Every Occasion with Elegance
-        </h1>
-        <p className="text-base md:text-lg text-gray-700 font-light max-w-3xl mx-auto mb-10">
-          At WishesIndia, we believe that every celebration deserves a touch of sweetness and sophistication. 
-          Perfect for corporate gifting, weddings, and special events.
-        </p>
-        
-        {/* How it works simple text */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-[#2b4c3b]">
-          <div className="p-4 border border-[#d1b19a] rounded-lg bg-white/50">
-            <h3 className="font-medium mb-2">1. Share Your Requirement</h3>
+    <div className="min-h-screen bg-white mt-40 pb-20 font-jost">
+      <div className="w-full max-w-[1600px] mx-auto py-12 px-6 md:px-16  font-jost">
+
+        {/* Section 1: Hero Text */}
+        <div className="text-center mb-24">
+          <h1 className="font-sloop text-3xl md:text-4xl lg:text-[70px] font-light text-[#5a4d41] capatalize  leading-[1.4] " >
+            Celebrate Every Occasion with Elegance
+          </h1>
+          <p className="text-base md:text-[17px] text-[var(--text)] font-light max-w-[1000px] mx-auto leading-relaxed mt-2">
+            At WishesIndia, we believe that every celebration deserves a touch of sweetness and sophistication. Whether it's a corporate milestone,
+            festive gifting, or a grand event, our handcrafted luxury sweets and hampers are designed to leave a lasting impression. At WishesIndia, we
+            don't just deliver sweets — we deliver emotions wrapped in luxury.
+          </p>
+        </div>
+
+        {/* Section 2: Perfect for Every Occasion */}
+        <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-24 mb-32">
+          <div className="w-full md:w-1/2">
+            <h2 className="font-sloop  text-[38px] sm:text-[46px] md:text-[40px] lg:text-[50px] text-black  mb-6 font-normal  max-w-xl mb-10">
+              Perfect for Every Occasion
+            </h2>
+            <ul className="space-y-4 text-black font-light text-[17px]">
+              <li>1. Corporate gifting &amp; festive hampers</li>
+              <li>2. Weddings, anniversaries &amp; special celebrations</li>
+              <li>3. Institutional &amp; ceremonial events</li>
+              <li>4. Luxury hospitality welcome kits</li>
+              <li>5. Personalized return gifts &amp; premium assortments</li>
+            </ul>
           </div>
-          <div className="p-4 border border-[#d1b19a] rounded-lg bg-white/50">
-            <h3 className="font-medium mb-2">2. Personalized Curation</h3>
-          </div>
-          <div className="p-4 border border-[#d1b19a] rounded-lg bg-white/50">
-            <h3 className="font-medium mb-2">3. Approval &amp; Production</h3>
-          </div>
-          <div className="p-4 border border-[#d1b19a] rounded-lg bg-white/50">
-            <h3 className="font-medium mb-2">4. Delivery &amp; Delight</h3>
+          <div className="w-full md:w-1/2">
+            <img src="/Images/collection1.jpg" alt="Perfect for Every Occasion" className="w-full h-auto object-cover rounded shadow-sm" />
           </div>
         </div>
-      </div>
 
-      {/* Form Section Split Layout */}
-      <div className="max-w-7xl mx-auto px-6 md:px-16">
-        <div className="flex flex-col md:flex-row gap-12 items-start bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-[#d1b19a]/30">
-          
-          {/* Left Side: Text */}
-          <div className="w-full md:w-5/12">
-            <h2 className="text-2xl md:text-4xl text-[#2b4c3b] mb-6 tracking-wide leading-tight">
-              Let’s Craft Something Memorable Together
+        {/* Section 3: How It Works */}
+        <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-24 mb-32">
+          <div className="w-full md:w-1/2 order-2 md:order-1">
+            <img src="/Images/collection2.jpg" alt="How it works" className="w-full h-[500px] object-cover rounded shadow-sm" />
+          </div>
+          <div className="w-full md:w-1/2 order-1 md:order-2">
+            <h2 className="font-sloop  text-[38px] sm:text-[46px] md:text-[40px] lg:text-[50px] text-black  mb-6 font-normal  max-w-xl mb-10">
+              How It Works
             </h2>
-            <p className="text-gray-600 font-light text-lg mb-6 leading-relaxed">
-              From corporate gifts to wedding hampers, WishesIndia crafts unforgettable gifting experiences. 
-              Tell us your vision — we’ll handle everything from curation to packaging with elegance and care.
-            </p>
-            <div className="hidden md:block">
-               <img src="/Images/collection1.jpg" alt="Bulk Gifting" className="w-full h-64 object-cover rounded-xl mt-8 shadow-sm" />
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-md font-jost font-semibold text-[#1d2b45] mb-2 uppercase">Share Your Requirement</h3>
+                <p className="text-black font-light text-[16px]">Let us know your occasion, guest count, preferred sweets, and packaging style.</p>
+              </div>
+              <div>
+                <h3 className="text-md font-jost font-semibold text-[#1d2b45] mb-2 uppercase">Personalized Curation</h3>
+                <p className="text-black font-light text-[16px]">Our team will craft a bespoke selection of sweets and hampers aligned to your taste, theme, and budget range.</p>
+              </div>
+              <div>
+                <h3 className="text-md font-jost font-semibold text-[#1d2b45] mb-2 uppercase">Approval &amp; Production</h3>
+                <p className="text-black font-light text-[16px]">Once finalized, our chefs prepare each batch fresh, ensuring unmatched quality and presentation.</p>
+              </div>
+              <div>
+                <h3 className="text-md font-heading font-semibold text-[#1d2b45] mb-2 uppercase">Delivery &amp; Delight</h3>
+                <p className="text-black font-light text-[16px]">Your gifts are delivered beautifully packaged, ready to make a memorable impression.</p>
+              </div>
             </div>
           </div>
-
-          {/* Right Side: Form */}
-          <div className="w-full md:w-7/12">
-            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-              <div className="flex flex-col md:flex-row gap-6">
-                <div className="flex-1 flex flex-col gap-2">
-                  <label htmlFor="name" className="text-sm text-gray-700 tracking-wide uppercase">Full Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Name"
-                    required
-                    className="w-full px-4 py-3 bg-[#f8f0e5]/50 border border-[#d1b19a] rounded focus:outline-none focus:ring-1 focus:ring-[#2b4c3b] transition-all text-black"
-                  />
-                </div>
-                <div className="flex-1 flex flex-col gap-2">
-                  <label htmlFor="email" className="text-sm text-gray-700 tracking-wide uppercase">Email Address</label>
-                  <input
-                    type="email"
-                    id="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Email"
-                    required
-                    className="w-full px-4 py-3 bg-[#f8f0e5]/50 border border-[#d1b19a] rounded focus:outline-none focus:ring-1 focus:ring-[#2b4c3b] transition-all text-black"
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label htmlFor="phone" className="text-sm text-gray-700 tracking-wide uppercase">Phone Number</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder="Phone Number"
-                  required
-                  className="w-full px-4 py-3 bg-[#f8f0e5]/50 border border-[#d1b19a] rounded focus:outline-none focus:ring-1 focus:ring-[#2b4c3b] transition-all text-black"
-                />
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label htmlFor="message" className="text-sm text-gray-700 tracking-wide uppercase">Comment</label>
-                <textarea
-                  id="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Put your Comment"
-                  rows={5}
-                  required
-                  className="w-full px-4 py-3 bg-[#f8f0e5]/50 border border-[#d1b19a] rounded focus:outline-none focus:ring-1 focus:ring-[#2b4c3b] transition-all resize-none text-black"
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                className="self-start mt-2 bg-[#2b4c3b] text-white px-8 py-3 uppercase tracking-widest text-sm hover:bg-[#1f372a] transition-colors rounded shadow-md"
-              >
-                Submit
-              </button>
-            </form>
-          </div>
-          
         </div>
+
       </div>
+
+      {/* Form Section */}
+
     </div>
   );
 };

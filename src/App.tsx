@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import Preloader from './components/Preloader'
 import SmoothScroll from './components/SmoothScroll'
+import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import ShopPage from './pages/ShopPage'
 import BulkOrder from './pages/BulkOrder'
@@ -13,7 +13,7 @@ function App() {
   return (
     <SmoothScroll>
     <div className="min-h-screen bg-white flex flex-col">
-      <Preloader />
+      <ScrollToTop />
       <Navbar />
       <main className="flex-grow">
         <Routes>

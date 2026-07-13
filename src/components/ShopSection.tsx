@@ -26,6 +26,13 @@ const ShopSection: React.FC = () => {
 
   return (
     <section className="w-full max-w-[1600px] mx-auto py-12 px-6 md:px-16  font-jost">
+      {/* Section Heading */}
+      <div className="text-center mb-12">
+        <h2 className="font-sloop text-3xl md:text-4xl lg:text-[70px] font-light text-[#5a4d41] capatalize  leading-[1.4] ">
+          Our Special Menu
+        </h2>
+      </div>
+
       {/* Category Navigation */}
       <div className="flex flex-wrap items-center justify-start gap-3 mb-10">
         {categories.map((category) => (
@@ -47,7 +54,7 @@ const ShopSection: React.FC = () => {
         {products.filter(p => p.category === activeCategory).map((product) => (
           <div
             key={product.id}
-            className="relative bg-[#f8f0e5] rounded-xl p-6 flex flex-col items-center justify-between min-h-[320px] transition-transform hover:-translate-y-1 cursor-pointer"
+            className="relative bg-[#f4c3c0] rounded-xl p-6 flex flex-col items-center justify-between min-h-[320px] transition-transform hover:-translate-y-1 cursor-pointer"
           >
             {/* Product Image */}
             <div className="flex-1 w-full flex items-center justify-center mt-6 mb-8">
@@ -60,7 +67,7 @@ const ShopSection: React.FC = () => {
 
             {/* Product Details */}
             <div className="w-full flex justify-center items-center mt-auto">
-              <h3 className="text-sm md:text-base font-medium text-gray-800 leading-tight text-center">
+              <h3 className="text-sm md:text-[15px] font-medium text-black leading-tight text-center">
                 {product.name}
               </h3>
             </div>

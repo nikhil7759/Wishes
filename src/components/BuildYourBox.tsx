@@ -26,7 +26,7 @@ const BuildYourBox: React.FC = () => {
             >
               <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
-            <h3 className="font-jost text-[12px] md:text-[13px] font-medium tracking-[0.25em] text-[#2d3319] uppercase mb-4">
+            <h3 className="font-jost text-[12px] md:text-[13px] font-medium text-[#2d3319] uppercase mb-4">
               Step One
             </h3>
             <p className="font-jost font-light text-[14px] leading-relaxed text-[#555] max-w-[240px]">
@@ -43,7 +43,7 @@ const BuildYourBox: React.FC = () => {
             >
               <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
-            <h3 className="font-jost text-[12px] md:text-[13px] font-medium tracking-[0.25em] text-[#2d3319] uppercase mb-4">
+            <h3 className="font-jost text-[12px] md:text-[13px] font-medium  text-[#2d3319] uppercase mb-4">
               Step Two
             </h3>
             <p className="font-jost font-light text-[14px] leading-relaxed text-[#555] max-w-[240px]">
@@ -60,7 +60,7 @@ const BuildYourBox: React.FC = () => {
             >
               <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
-            <h3 className="font-jost text-[12px] md:text-[13px] font-medium tracking-[0.25em] text-[#2d3319] uppercase mb-4">
+            <h3 className="font-jost text-[12px] md:text-[13px] font-medium  text-[#2d3319] uppercase mb-4">
               Step Three
             </h3>
             <p className="font-jost font-light text-[14px] leading-relaxed text-[#555] max-w-[240px]">

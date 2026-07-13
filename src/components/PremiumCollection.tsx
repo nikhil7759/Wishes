@@ -105,7 +105,7 @@ const PremiumCollection: React.FC = () => {
 
               {/* Caption */}
               <div className="mt-4 flex flex-col items-start w-full">
-                <h4 className="font-jost text-[12px] md:text-[12px] text-[#6d4833] uppercase tracking-[0.1em] font-medium transition-colors duration-300">
+                <h4 className="font-jost text-[12px] md:text-[15px] text-[#6d4833] capitalize  font-medium transition-colors duration-300">
                   {item.title}
                 </h4>
                 {/* <span className="font-jost text-[11px] md:text-[12px] text-black/50 tracking-wide mt-1 font-light">

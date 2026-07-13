@@ -5,7 +5,7 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
-  
+
   const [scrolled, setScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -13,18 +13,18 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
       // Hide on scroll down, show on scroll up
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
         setIsVisible(false);
       } else {
         setIsVisible(true);
       }
-      
+
       setScrolled(currentScrollY > 50);
       setLastScrollY(currentScrollY);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
@@ -38,15 +38,15 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/shop', label: 'Shop' },
-    { to: '/bulk-order', label: 'Bulk Order' },
-    { to: '/gifting', label: 'Gifting' },
-    { to: '/contact', label: 'Contact' },
-    { to: '/order-online', label: 'Order Online' },
+    { to: '/', label: 'Bulk Order' },
+    { to: '/', label: 'Gifting' },
+    { to: '/', label: 'Contact' },
+    { to: '/', label: 'Order Online' },
   ];
 
   return (
     <>
-      <nav className={`w-full fixed top-0 z-50 px-6 md:px-12 py-6 flex items-center justify-between font-jost uppercase tracking-[0.1em] text-[12px] md:text-[13px] transition-all duration-300 ${navBg} ${transformClass}`}>
+      <nav className={`w-full fixed top-0 z-50 px-6 md:px-12 py-6 flex items-center justify-between font-jost capitalize text-[12px] md:text-[13px] transition-all duration-300 ${navBg} ${transformClass}`}>
         {/* Left Area */}
         <div className="flex items-center gap-5 xl:gap-6 flex-1">
           {/* Mobile Hamburger */}
@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 9h16M4 15h16" />
             </svg>
           </button>
-          
+
           {/* Desktop Nav Links */}
           <div className="hidden lg:flex items-center gap-5 xl:gap-6">
             {navLinks.slice(0, 3).map((link) => (
@@ -107,7 +107,7 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Drawer Links */}
-        <div className="flex flex-col px-10 gap-6 text-[15px] uppercase tracking-[0.15em] font-jost font-light">
+        <div className="flex flex-col px-10 gap-6 text-[15px] capitalize font-jost font-light">
           {navLinks.map((link) => (
             <Link key={link.to} to={link.to} className="hover:text-[#d1b19a] transition-colors py-2 border-b border-white/10" onClick={() => setIsOpen(false)}>
               {link.label}

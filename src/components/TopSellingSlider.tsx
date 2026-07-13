@@ -128,7 +128,7 @@ const TopSellingSlider: React.FC = () => {
                     </div>
 
                     {/* Caption */}
-                    <h4 className="mt-6 font-jost font-light text-[15px] md:text-[16px] text-black  tracking-[0.01rem] text-center transition-colors duration-300 group-hover:text-black uppercase">
+                    <h4 className="mt-6 font-jost font-light text-[15px] md:text-[16px] text-black tracking-[0.01rem] text-left w-full transition-colors duration-300 group-hover:text-black capitalize">
                       {item.title}
                     </h4>
                   </a>

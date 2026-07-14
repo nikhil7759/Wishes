@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 interface CollectionItem {
   id: number;
@@ -9,15 +9,15 @@ interface CollectionItem {
 }
 
 const PremiumCollection: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('New Arrivals');
+  // const [activeCategory, setActiveCategory] = useState('New Arrivals');
 
-  const categories = [
-    'New Arrivals',
-    'Signature Sweets',
-    'Gift Boxes',
-    'Corporate',
-    'Wedding'
-  ];
+  // const categories = [
+  //   'New Arrivals',
+  //   'Signature Sweets',
+  //   'Gift Boxes',
+  //   'Corporate',
+  //   'Wedding'
+  // ];
 
   const collections: CollectionItem[] = [
     {

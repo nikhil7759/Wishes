@@ -22,7 +22,7 @@ const TopSellingSlider: React.FC = () => {
   const [itemsPerPage, setItemsPerPage] = useState(4);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(true);
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  // const [isTransitioning, setIsTransitioning] = useState(false);
 
   // Track viewport resize to adjust items shown per page
   useEffect(() => {
@@ -53,22 +53,22 @@ const TopSellingSlider: React.FC = () => {
     setCurrentIndex(itemsPerPage);
   }, [itemsPerPage]);
 
-  const handleNext = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setIsAnimating(true);
-    setCurrentIndex((prev) => prev + 1);
-  };
+  // const handleNext = () => {
+  //   if (isTransitioning) return;
+  //   setIsTransitioning(true);
+  //   setIsAnimating(true);
+  //   setCurrentIndex((prev) => prev + 1);
+  // };
 
-  const handlePrev = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setIsAnimating(true);
-    setCurrentIndex((prev) => prev - 1);
-  };
+  // const handlePrev = () => {
+  //   if (isTransitioning) return;
+  //   setIsTransitioning(true);
+  //   setIsAnimating(true);
+  //   setCurrentIndex((prev) => prev - 1);
+  // };
 
   const handleTransitionEnd = () => {
-    setIsTransitioning(false);
+    // setIsTransitioning(false);
 
     // Boundary checks for wrapping around infinitely
     if (currentIndex >= items.length + itemsPerPage) {

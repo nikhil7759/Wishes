@@ -1,26 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const BulkOrder: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   phone: '',
+  //   message: ''
+  // });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.id]: e.target.value
-    });
-  };
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.id]: e.target.value
+  //   });
+  // };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log(formData);
-    // Handle form submission
-    alert('Thank you for your inquiry. We will get back to you soon!');
-  };
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   console.log(formData);
+  //   // Handle form submission
+  //   alert('Thank you for your inquiry. We will get back to you soon!');
+  // };
 
   return (
     <div className="min-h-screen bg-white mt-40 pb-20 font-jost">

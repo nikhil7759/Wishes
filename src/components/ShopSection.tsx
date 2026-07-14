@@ -54,7 +54,7 @@ const ShopSection: React.FC = () => {
         {products.filter(p => p.category === activeCategory).map((product) => (
           <div
             key={product.id}
-            className="relative bg-[#f4c3c0] rounded-xl p-6 flex flex-col items-center justify-between min-h-[320px] transition-transform hover:-translate-y-1 cursor-pointer"
+            className="relative bg-[#f4c3c0]  p-6 flex flex-col items-center justify-between min-h-[320px] transition-transform hover:-translate-y-1 cursor-pointer"
           >
             {/* Product Image */}
             <div className="flex-1 w-full flex items-center justify-center mt-6 mb-8">

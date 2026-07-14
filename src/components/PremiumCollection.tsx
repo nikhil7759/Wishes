@@ -54,36 +54,28 @@ const PremiumCollection: React.FC = () => {
     <section className="bg-[#f8f0e5] py-12 md:py-20 px-6 md:px-12 lg:px-16 font-jost">
       <div className=" mx-auto">
 
-        {/* Top Navigation / Header */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 pb-4">
-
-          {/* Categories */}
-          <div className="flex flex-wrap items-center gap-6 md:gap-8 overflow-x-auto whitespace-nowrap scrollbar-hide pb-2 md:pb-0">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={` cursor-pointer uppercase text-[10px] md:text-xs tracking-[0.08em] transition-colors focus:outline-none ${activeCategory === category
-                  ? 'text-[#6d4833] font-medium'
-                  : 'text-[#6d4833]/50 hover:text-[#6d4833]/70 font-medium'
-                  }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-
-          {/* View All Link */}
-          <a
-            href="/premium"
-            className="hidden md:flex items-center gap-2 uppercase text-[10px] md:text-xs tracking-[0.15em] text-[#6d4833]/40 hover:text-[#6d4833] transition-colors font-medium"
-          >
-            View All
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
+        {/* Section Heading */}
+        <div className="text-center mb-12">
+          <h2 className="font-sloop font-light text-3xl md:text-[50px] capitalize text-[#5a4d41]">
+            For special Ocassions
+          </h2>
         </div>
+
+        {/* Categories */}
+        {/* <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12 mb-12 overflow-x-auto whitespace-nowrap scrollbar-hide pb-2 md:pb-0">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              className={`cursor-pointer uppercase text-[12px] md:text-[14px] tracking-[0.15em] transition-colors focus:outline-none ${activeCategory === category
+                ? 'text-[#5a4d41] font-medium'
+                : 'text-[#a39485] hover:text-[#5a4d41]'
+                }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div> */}
 
         {/* Collection Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-2">

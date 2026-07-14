@@ -42,18 +42,17 @@ const collections: CollectionItem[] = [
 
 const ArtisanalCollection: React.FC = () => {
   return (
-    <section className="bg-[#f8f0e5] py-16 px-6 md:px-16 lg:px-24 select-none">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-[#f8f0e5] py-16 px-6 md:px-16 lg:px-24 relative overflow-hidden select-none">
 
-        {/* Section Heading matching Premium Collection */}
-        <div className="text-center mb-16">
-          <h2 className="font-sloop font-light text-3xl md:text-[50px] capitalize text-[#5a4d41]">
-            Artisan Collection
-          </h2>
-        </div>
+      {/* Section Heading matching Premium Collection */}
+      <div className="text-center mb-12">
+        <h2 className="font-sloop font-light text-3xl md:text-[50px] capitalize text-[#5a4d41]">
+          Artisan Collection
+        </h2>
+      </div>
 
-        {/* Product Cards Grid matching PremiumCollection columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+      {/* Product Cards Grid matching PremiumCollection columns */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
           {collections.map((item) => (
             <a
               key={item.id}
@@ -91,8 +90,6 @@ const ArtisanalCollection: React.FC = () => {
             Explore All
           </Link>
         </div>
-
-      </div>
     </section>
   );
 };

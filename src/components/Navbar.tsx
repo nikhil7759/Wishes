@@ -33,7 +33,6 @@ const Navbar: React.FC = () => {
   const isTransparent = isHome && !scrolled;
   const navBg = isTransparent ? 'bg-transparent text-white' : 'bg-[#f8f0e5] text-[#5a4d41] shadow-md';
   const transformClass = isVisible ? 'translate-y-0' : '-translate-y-full';
-  const logoFilter = isTransparent ? 'brightness-0 invert' : 'brightness-0';
 
   const navLinks = [
     { to: '/', label: 'Home' },
@@ -69,8 +68,8 @@ const Navbar: React.FC = () => {
         {/* Center Logo */}
         <div className="flex-1 flex justify-center items-center">
           <Link to="/" className="flex flex-col items-center">
-            <img src="/logo/wishes%20logo.png" alt="Wishes Logo" className={`h-10 md:h-15 w-auto object-contain transition-all duration-300 ${logoFilter}`} />
-            <span className="mt-1 text-[8px] md:text-[9px] tracking-[0.3em]">By Om Sweets</span>
+            <img src="/logo/wishes%20logo1.png" alt="Wishes Logo" className="h-10 md:h-15 w-auto object-contain transition-all duration-300" />
+            {/* <span className="mt-1 text-[8px] md:text-[9px] tracking-[0.3em]">By Om Sweets</span> */}
           </Link>
         </div>
 

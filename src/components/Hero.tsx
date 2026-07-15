@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
                 color: '#fbede3',
               }}
             >
-              Taste The Magic Of Wishes
+              Taste the Magic Of Wishes
             </h1>
 
             <p

@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
           {/* Desktop Nav Links */}
           <div className="hidden lg:flex items-center gap-5 xl:gap-6">
             {navLinks.slice(0, 3).map((link) => (
-              <Link key={link.to} to={link.to} className="hover:opacity-70 transition-opacity whitespace-nowrap">
+              <Link key={link.to} to={link.to} className="hover:opacity-70 transition-opacity whitespace-nowrap uppercase">
                 {link.label}
               </Link>
             ))}
@@ -78,7 +78,7 @@ const Navbar: React.FC = () => {
           {/* Desktop Nav Links */}
           <div className="hidden lg:flex items-center gap-5 xl:gap-6">
             {navLinks.slice(3, 6).map((link) => (
-              <Link key={link.to} to={link.to} className="hover:opacity-70 transition-opacity whitespace-nowrap">
+              <Link key={link.to} to={link.to} className="hover:opacity-70 transition-opacity whitespace-nowrap uppercase">
                 {link.label}
               </Link>
             ))}

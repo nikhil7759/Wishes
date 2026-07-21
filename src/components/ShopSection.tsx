@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const categories = ['Sweets', 'Bar', 'Macaron', 'Namkeen', 'Box', 'Cake'];
 
@@ -247,27 +247,334 @@ const products = [
     "image": "/Images/product/Cake/WISHES MANGO CAKE.jpg",
     "category": "Cake",
     "description": "A light and refreshing cake infused with the tropical sweetness of luscious mangoes."
+  },
+  {
+    "id": 36,
+    "name": "Dark Chocolate Popcorn",
+    "image": "/Images/product/Sweets/Dark Chocolate Popcorn 100g.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 37,
+    "name": "Dark Kunafa Dates",
+    "image": "/Images/product/Sweets/Dark Kunafa Dates 1pc.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 38,
+    "name": "Dates Amande Noir",
+    "image": "/Images/product/Sweets/Dates Amande Noir.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 39,
+    "name": "Dates Bite",
+    "image": "/Images/product/Sweets/Dates Bite 1pc.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 40,
+    "name": "Dhoda Munch",
+    "image": "/Images/product/Sweets/Dhoda Munch 1pc.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 41,
+    "name": "D'Oranger",
+    "image": "/Images/product/Sweets/D_Oranger 1pc.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 42,
+    "name": "Choco Chip Cocoa Swirl Cookie",
+    "image": "/Images/product/Sweets/F0002282 (Choco Chip Cocoa Swirl Cookie 1 PC).jpg",
+    "category": "Sweets",
+    "description": "A perfectly baked gourmet cookie loaded with decadent f0002282 goodness and a buttery bite."
+  },
+  {
+    "id": 43,
+    "name": "Cocoa Swirl Cookie",
+    "image": "/Images/product/Sweets/F0002285 (Cocoa Swirl Cookie 1 PC).jpg",
+    "category": "Sweets",
+    "description": "A perfectly baked gourmet cookie loaded with decadent f0002285 goodness and a buttery bite."
+  },
+  {
+    "id": 44,
+    "name": "Gulkand Chocolate Ladoo",
+    "image": "/Images/product/Sweets/Gulkand Chocolate Ladoo 1pc.jpg",
+    "category": "Sweets",
+    "description": "A delicately crafted sweet sphere offering a perfect balance of traditional richness and gulkand flavour."
+  },
+  {
+    "id": 45,
+    "name": "Hazelnut Praline Truffle",
+    "image": "/Images/product/Sweets/Hazelnut Praline Truffle 1 pc.jpg",
+    "category": "Sweets",
+    "description": "An exquisite artisanal truffle with a smooth, velvety center and sophisticated flavor profile."
+  },
+  {
+    "id": 46,
+    "name": "Hazelnut Rollard",
+    "image": "/Images/product/Sweets/Hazelnut Rollard 1pc.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 47,
+    "name": "ITALIAN TIRAMISU BARFI",
+    "image": "/Images/product/Sweets/ITALIAN TIRAMISU BARFI.jpg",
+    "category": "Sweets",
+    "description": "A rich, melt-in-the-mouth Indian delicacy featuring premium italian and aromatic notes."
+  },
+  {
+    "id": 48,
+    "name": "KAJU BARFI 5",
+    "image": "/Images/product/Sweets/KAJU BARFI PACK OF 5.jpg",
+    "category": "Sweets",
+    "description": "A rich, melt-in-the-mouth Indian delicacy featuring premium kaju and aromatic notes."
+  },
+  {
+    "id": 49,
+    "name": "Kesar Rabdi Bonbon",
+    "image": "/Images/product/Sweets/Kesar Rabdi Bonbon.jpg",
+    "category": "Sweets",
+    "description": "An exquisite artisanal truffle with a smooth, velvety center and sophisticated flavor profile."
+  },
+  {
+    "id": 50,
+    "name": "Kunafa Bite Chocolate",
+    "image": "/Images/product/Sweets/Kunafa Bite Chocolate 1 pc.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 51,
+    "name": "LOTUS BISCOFF BARFI",
+    "image": "/Images/product/Sweets/LOTUS BISCOFF BARFI.jpg",
+    "category": "Sweets",
+    "description": "A rich, melt-in-the-mouth Indian delicacy featuring premium lotus and aromatic notes."
+  },
+  {
+    "id": 52,
+    "name": "Lychee Duo Bonbon",
+    "image": "/Images/product/Sweets/Lychee Duo Bonbon.jpg",
+    "category": "Sweets",
+    "description": "An exquisite artisanal truffle with a smooth, velvety center and sophisticated flavor profile."
+  },
+  {
+    "id": 53,
+    "name": "MANGO CHOCOLATE CUP",
+    "image": "/Images/product/Sweets/MANGO CHOCOLATE CUP.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 54,
+    "name": "MANGO DARK CHOCOLATE",
+    "image": "/Images/product/Sweets/MANGO DARK CHOCOLATE.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 55,
+    "name": "Mango Macaron",
+    "image": "/Images/product/Sweets/Mango Macaron 1pc.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 56,
+    "name": "Mango Mascarpone Barfi",
+    "image": "/Images/product/Sweets/Mango Mascarpone Barfi 1pc.jpg",
+    "category": "Sweets",
+    "description": "A rich, melt-in-the-mouth Indian delicacy featuring premium mango and aromatic notes."
+  },
+  {
+    "id": 57,
+    "name": "Milk Coconut Chocolate",
+    "image": "/Images/product/Sweets/Milk Coconut Chocolate 1pc.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 58,
+    "name": "Milk Kunafa Dates",
+    "image": "/Images/product/Sweets/Milk Kunafa Dates 1pc.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 59,
+    "name": "OPERA VERRINE",
+    "image": "/Images/product/Sweets/OPERA VERRINE.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 60,
+    "name": "Pecan Delight",
+    "image": "/Images/product/Sweets/Pecan Delight 1pc.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 61,
+    "name": "PECAN DELIGHT",
+    "image": "/Images/product/Sweets/PECAN DELIGHT.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 62,
+    "name": "Pista Paan",
+    "image": "/Images/product/Sweets/Pista Paan 1pc.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 63,
+    "name": "Pistachio Pineapple Ladoo",
+    "image": "/Images/product/Sweets/Pistachio Pineapple Ladoo 1pc.jpg",
+    "category": "Sweets",
+    "description": "A delicately crafted sweet sphere offering a perfect balance of traditional richness and pistachio flavour."
+  },
+  {
+    "id": 64,
+    "name": "PISTACHIO PRALINE KATLI",
+    "image": "/Images/product/Sweets/PISTACHIO PRALINE KATLI.jpg",
+    "category": "Sweets",
+    "description": "A rich, melt-in-the-mouth Indian delicacy featuring premium pistachio and aromatic notes."
+  },
+  {
+    "id": 65,
+    "name": "Raspberry Macaron",
+    "image": "/Images/product/Sweets/Raspberry Macaron 1pc.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 66,
+    "name": "Red Velvet Cookie",
+    "image": "/Images/product/Sweets/Red Velvet Cookie 1 PC.jpg",
+    "category": "Sweets",
+    "description": "A perfectly baked gourmet cookie loaded with decadent red goodness and a buttery bite."
+  },
+  {
+    "id": 67,
+    "name": "Rose Lychee Ladoo",
+    "image": "/Images/product/Sweets/Rose Lychee Ladoo 1pc.jpg",
+    "category": "Sweets",
+    "description": "A delicately crafted sweet sphere offering a perfect balance of traditional richness and rose flavour."
+  },
+  {
+    "id": 68,
+    "name": "Rose Milk Ladoo",
+    "image": "/Images/product/Sweets/Rose Milk Ladoo 1pc.jpg",
+    "category": "Sweets",
+    "description": "A delicately crafted sweet sphere offering a perfect balance of traditional richness and rose flavour."
+  },
+  {
+    "id": 69,
+    "name": "Royale Paan Pistachio",
+    "image": "/Images/product/Sweets/Royale Paan Pistachio 1pc.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 70,
+    "name": "SICILIAN PISTACHIO BARFI",
+    "image": "/Images/product/Sweets/SICILIAN PISTACHIO BARFI.jpg",
+    "category": "Sweets",
+    "description": "A rich, melt-in-the-mouth Indian delicacy featuring premium sicilian and aromatic notes."
+  },
+  {
+    "id": 71,
+    "name": "Spiced Trail Mix",
+    "image": "/Images/product/Sweets/Spiced Trail Mix 100g.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 72,
+    "name": "Walnut Date Delight",
+    "image": "/Images/product/Sweets/Walnut Date Delight 1pc.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 73,
+    "name": "White Chocolate Dates",
+    "image": "/Images/product/Sweets/White Chocolate Dates 1pc.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 74,
+    "name": "WHITE CHOCOLATE MACAROON",
+    "image": "/Images/product/Sweets/WHITE CHOCOLATE MACAROON.jpg",
+    "category": "Sweets",
+    "description": "A premium handcrafted sweet offering a luxurious blend of classic textures and rich flavours."
+  },
+  {
+    "id": 75,
+    "name": "Mango Macaron",
+    "image": "/Images/product/Macaron/Mango Macaron 1pc.jpg",
+    "category": "Macaron",
+    "description": "A delicate, airy French macaron featuring a crisp shell and a luscious, flavourful ganache center."
+  },
+  {
+    "id": 76,
+    "name": "WHITE CHOCOLATE MACAROON",
+    "image": "/Images/product/Macaron/WHITE CHOCOLATE MACAROON.jpg",
+    "category": "Macaron",
+    "description": "A delicate, airy French macaron featuring a crisp shell and a luscious, flavourful ganache center."
   }
 ];
 
 const ShopSection: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('Sweets');
+  const [visibleCount, setVisibleCount] = useState(16);
+
+  useEffect(() => {
+    setVisibleCount(window.innerWidth < 768 ? 8 : 16);
+  }, [activeCategory]);
 
   return (
-    <section className="w-full py-16 md:py-8 px-6 md:px-12 lg:px-20 font-jost bg-[#f8f0e5] relative overflow-hidden select-none z-0">
-      <div className="max-w-[1600px] mx-auto">
-        {/* Section Heading */}
-        <div className="text-center mb-12">
-          <h2 className="font-jost text-3xl md:text-[42px] font-light text-[#5a4d41] capitalize leading-[1.4]">
-            <span className="font-burgues text-[65px] md:text-[100px] lowercase -mr-2">o</span>ur Special Menu
+    <section className="w-full pb-16 md:pb-20 font-jost bg-[#f8f0e5] relative overflow-hidden select-none z-0">
+
+      {/* Section Heading Banner (Full Width) */}
+      <div className="relative w-full bg-[#f4c3c0] pt-16 md:pt-20 pb-16 md:pb-20 mb-12">
+        <div className="text-center px-6 md:px-12 relative z-10 max-w-[1600px] mx-auto">
+          <h2 className="font-jost text-3xl md:text-[40px] font-light text-black capitalize leading-[1]">
+            <span className="font-burgues text-[65px] md:text-[145px] lowercase -mr-2">o</span>ur Special Menu
           </h2>
-          <p className="mt-4 text-[14px] md:text-[15px] text-gray-600 max-w-xl mx-auto font-light tracking-wide">
+          <p className="mt-4 text-[14px] md:text-[15px] text-black opacity-80 max-w-xl mx-auto font-light tracking-wide">
             Discover our carefully curated selection of premium sweets and chocolates, crafted with passion and elegance.
           </p>
         </div>
 
+        {/* Scalloped Bottom Edge */}
+        <div
+          className="absolute bottom-0 left-0 w-full h-[15px]"
+          style={{
+            backgroundImage: "radial-gradient(circle at 15px 15px, #f8f0e5 14.5px, transparent 15px)",
+            backgroundSize: "30px 15px",
+            backgroundRepeat: "repeat-x"
+          }}
+        />
+      </div>
+
+      {/* Main Content Container */}
+      <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-20">
+
         {/* Category Navigation */}
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 mb-12 border-b border-[#e8dfd5] pb-1">
+        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 mb-12 pb-1">
           {categories.map((category) => (
             <button
               key={category}
@@ -289,7 +596,7 @@ const ShopSection: React.FC = () => {
 
         {/* Product Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 pt-6 px-2">
-          {products.filter(p => p.category === activeCategory).map((product, index) => {
+          {products.filter(p => p.category === activeCategory).slice(0, visibleCount).map((product, index) => {
             return (
               <a
                 key={product.id}
@@ -306,12 +613,12 @@ const ShopSection: React.FC = () => {
 
 
                 {/* Top Sparkles (Decorative) */}
-                <div className="absolute top-8 left-6 text-[#d1b19a] opacity-50 text-xl font-light">
+                <div className="absolute top-4 left-6 text-[#d1b19a] opacity-50 text-xl font-light">
                   ✦
                 </div>
 
                 {/* Image Container */}
-                <div className="w-full flex items-center justify-center relative z-10 mt-6 mb-2 h-48 md:h-56 shrink-0">
+                <div className="w-full flex items-center justify-center relative z-10 mt-6 mb-2 h-48 md:h-44 shrink-0">
                   <img
                     src={product.image}
                     alt={product.name}
@@ -345,6 +652,18 @@ const ShopSection: React.FC = () => {
             );
           })}
         </div>
+
+        {/* Load More Button */}
+        {products.filter(p => p.category === activeCategory).length > visibleCount && (
+          <div className="flex justify-center mt-12 mb-4">
+            <button
+              onClick={() => setVisibleCount(prev => prev + (window.innerWidth < 768 ? 8 : 16))}
+              className="inline-block bg-[#b49377] hover:bg-[#9a7b60] text-white uppercase text-[10px] md:text-[11px] font-medium tracking-[0.15em] px-10 py-4 transition-colors cursor-pointer"
+            >
+              Load More
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

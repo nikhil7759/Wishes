@@ -52,13 +52,13 @@ const Hero: React.FC = () => {
             }}
           >
             <h1
-              className="font-sloop font-normal leading-[1.15] tracking-[2px] mb-5"
+              className="font-jost font-light leading-[1.15]  mb-5"
               style={{
-                fontSize: 'clamp(36px, 4.5vw, 45px)',
+                fontSize: 'clamp(36px, 4.5vw, 36px)',
                 color: '#fbede3',
               }}
             >
-              Taste the Magic Of Wishes
+              <span className="font-burgues text-[65px]">T</span>aste the Magic of Wishes
             </h1>
 
             <p

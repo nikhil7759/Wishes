@@ -23,8 +23,8 @@ const FloralServices: React.FC = () => {
 
 
             {/* Heading */}
-            <h2 className="font-sloop  text-[38px] sm:text-[46px] md:text-[40px] lg:text-[60px] text-black  mb-6 font-normal  max-w-xl">
-              About Us
+            <h2 className="font-jost text-[38px] sm:text-[46px] md:text-[36px] lg:text-[36px] text-black mb-6 font-light max-w-xl">
+              <span className="font-burgues text-[50px] lg:text-[70px]">A</span>bout Us
             </h2>
 
             {/* Body Paragraphs */}
@@ -38,18 +38,14 @@ const FloralServices: React.FC = () => {
             </div>
 
             {/* Interactive Call to Action */}
-            {/* <div className="mt-8">
+            <div className="mt-8">
               <a
-                href="/about"
-                className="group inline-flex items-center gap-2 font-jost uppercase tracking-[0.15em] text-[13px] md:text-[14px] text-[#2d3319] font-medium transition-colors duration-300 hover:text-[#f8f0e5]"
+                href="/floral-services"
+                className="inline-block bg-[#b49377] hover:bg-[#9a7b60] text-white uppercase text-[10px] md:text-[11px] font-medium tracking-[0.15em] px-10 py-4 transition-colors"
               >
-                <span>Discover Our Story</span>
-                <span className="inline-block transition-transform duration-300 group-hover:translate-x-1.5">
-                  →
-                </span>
+                Explore Services
               </a>
-              <div className="h-[1px] w-full bg-[#2d3319] mt-1 transition-transform duration-300 origin-left scale-x-100 group-hover:scale-x-110 group-hover:bg-[#f8f0e5]" />
-            </div> */}
+            </div>
           </div>
 
           {/* RIGHT COLUMN: LARGE IMAGE */}

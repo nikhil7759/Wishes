@@ -10,8 +10,8 @@ const BuildYourBox: React.FC = () => {
       <div className="w-full max-w-4xl bg-[#f8f0e5] shadow-xl py-14 px-8 md:px-16 text-center border border-gray-100 rounded-sm">
 
         {/* Section Title */}
-        <h2 className="font-sloop font-light text-3xl md:text-[50px] capitalize text-[#5a4d41]">
-          Build Your Box
+        <h2 className="font-jost font-light text-3xl md:text-[40px]  text-[#5a4d41]">
+          <span className="font-burgues text-[65px]">B</span>uild Your Box
         </h2>
 
         {/* Curation Steps (3-column layout) */}
@@ -74,7 +74,7 @@ const BuildYourBox: React.FC = () => {
         <div className="flex justify-center mt-6">
           <button
             type="button"
-            className="bg-[#d1b19a] hover:bg-[#d1b19a] text-black font-jost text-xs uppercase tracking-[0.2em] font-medium py-3 px-8 border border-[#d1b19a] transition-all duration-300 active:scale-95 shadow-sm hover:shadow-md cursor-pointer rounded-sm"
+            className="inline-block bg-[#b49377] hover:bg-[#9a7b60] text-white uppercase text-[10px] md:text-[11px] font-medium tracking-[0.15em] px-10 py-4 transition-colors"
           >
             Sign Me Up
           </button>

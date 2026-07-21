@@ -88,8 +88,8 @@ const TopSellingSlider: React.FC = () => {
 
       {/* Section Heading */}
       <div className="text-center mb-12">
-        <h2 className="font-sloop font-light text-3xl md:text-[50px] capitalize text-[#5a4d41]">
-          Top Selling Items
+        <h2 className="font-jost font-light text-3xl md:text-[40px]  text-[#5a4d41]">
+          <span className="font-burgues text-[65px]">T</span>op Selling Items
         </h2>
       </div>
 

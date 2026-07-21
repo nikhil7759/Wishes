@@ -25,9 +25,9 @@ const BoutiqueSection: React.FC = () => {
         }}
       >
 
-        <h2 className="font-sloop font-normal leading-[1.15] tracking-[2px] mb-5"
-          style={{ fontSize: 'clamp(36px, 4.5vw, 45px)', color: '#fbede3' }}>
-          Explore Our Boutique
+        <h2 className="font-jost font-light  mb-5"
+          style={{ fontSize: 'clamp(36px, 4.5vw, 40px)', color: '#fbede3' }}>
+          <span className="font-burgues text-[65px]">E</span>xplore Our Boutique
         </h2>
 
         {/* Narrative Description */}
@@ -39,12 +39,12 @@ const BoutiqueSection: React.FC = () => {
         </div>
 
         {/* Call to Action Button matching BuildYourBox */}
-        <button
-          type="button"
-          className="bg-[#d1b19a] hover:bg-[#d1b19a] text-black font-jost text-xs uppercase  font-medium py-3.5 px-8 border border-[#d1b19a] transition-all duration-300 active:scale-95 shadow-sm hover:shadow-md cursor-pointer rounded-sm mt-6"
+        <a
+          href="/about"
+          className="inline-block bg-[#b49377] hover:bg-[#9a7b60] text-white uppercase text-[10px] md:text-[11px] font-medium tracking-[0.15em] px-10 py-4 transition-colors mt-6"
         >
           Visit Us
-        </button>
+        </a>
 
       </div>
     </section>

@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import 'lenis/dist/lenis.css';
 @import "tailwindcss";
-
-
 @font-face {
   font-family: 'National2Web';
   src: url('/font/National2Web-Regular.woff2') format('woff2');
@@ -44,8 +42,8 @@
 }
 
 @font-face {
-  font-family: 'Sloop';
-  src: url('/font/Sloop-Script-Regular.woff2') format('woff2');
+  font-family: 'Burgues Script';
+  src: url('/font/Burgues Script Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -57,6 +55,7 @@
   --font-futura: 'Futura Book', sans-serif;
   --font-jost: 'Jost', sans-serif;
   --font-sloop: 'Sloop', sans-serif;
+  --font-burgues: 'Burgues Script', sans-serif;
   --font-display: 'Cormorant Garamond', serif;
 }
 

@@ -51,13 +51,13 @@ const PremiumCollection: React.FC = () => {
   ];
 
   return (
-    <section className="bg-[#f8f0e5] py-12 md:py-20 px-6 md:px-12 lg:px-16 font-jost">
+    <section className="bg-[#f8f0e5] py-12 md:py-20 px-6 md:px-12 lg:px-16 font-jost relative overflow-hidden select-none z-0">
       <div className=" mx-auto">
 
         {/* Section Heading */}
         <div className="text-center mb-12">
-          <h2 className="font-sloop font-light text-3xl md:text-[50px] capitalize text-[#5a4d41]">
-            For special Ocassions
+          <h2 className="font-jost font-light text-3xl md:text-[40px]  text-[#5a4d41]">
+            <span className="font-burgues text-[65px]">F</span>or Special Ocassions
           </h2>
         </div>
 
@@ -78,33 +78,32 @@ const PremiumCollection: React.FC = () => {
         </div> */}
 
         {/* Collection Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4 lg:gap-6 mt-4">
           {collections.map((item) => (
-            <a
-              key={item.id}
-              href={item.link}
-              className="group flex flex-col items-start focus:outline-none"
-            >
-              {/* Image Container */}
-              <div className="w-full aspect-[4/5] overflow-hidden bg-[#e8dccb] transition-shadow duration-300 group-hover:shadow-lg">
-                <img
-                  src={item.imageUrl}
-                  alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 mix-blend-multiply"
-                  loading="lazy"
-                />
-              </div>
+            <div key={item.id} className="relative group filter drop-shadow-md hover:drop-shadow-xl transition-all duration-300 hover:-translate-y-2 h-[420px] sm:h-[600px]">
+              <a
+                href={item.link}
+                className="flex flex-col items-center justify-start focus:outline-none bg-[#eabfb9] pb-12 h-full w-full"
+                style={{
+                  clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 30px), 50% 100%, 0 calc(100% - 30px))'
+                }}
+              >
+                {/* Image Container */}
+                <div className="w-full h-[90%] sm:h-[90%] overflow-hidden bg-[#fffdfa] mb-4 flex-shrink-0">
+                  <img
+                    src={item.imageUrl}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 mix-blend-multiply"
+                    loading="lazy"
+                  />
+                </div>
 
-              {/* Caption */}
-              <div className="mt-4 flex flex-col items-start w-full">
-                <h4 className="font-jost text-[12px] md:text-[15px] text-[#6d4833] capitalize  font-medium transition-colors duration-300">
+                {/* Title */}
+                <h4 className="font-jost font-light text-[14px] sm:text-[15px]  capitalize text-center text-[#000]  px-4 mt-auto leading-tight">
                   {item.title}
                 </h4>
-                {/* <span className="font-jost text-[11px] md:text-[12px] text-black/50 tracking-wide mt-1 font-light">
-                  {item.subtitle}
-                </span> */}
-              </div>
-            </a>
+              </a>
+            </div>
           ))}
         </div>
 

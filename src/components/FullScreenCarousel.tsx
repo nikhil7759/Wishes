@@ -61,10 +61,10 @@ const FullScreenCarousel: React.FC = () => {
             </span>
 
             <h2
-              className={`font-sloop text-white text-3xl sm:text-5xl md:text-6xl lg:text-[60px] capitalize  font-light mb-6 drop-shadow-sm transition-all duration-1000 delay-300 ${index === currentSlide ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+              className={`font-jost text-white text-3xl sm:text-5xl md:text-5xl lg:text-[50px]   font-light mb-6 drop-shadow-sm transition-all duration-1000 delay-300 ${index === currentSlide ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                 }`}
             >
-              {slide.title}
+              <span className="font-burgues text-[50px] lg:text-[70px]">{slide.title.charAt(0)}</span>{slide.title.slice(1)}
             </h2>
 
             <p

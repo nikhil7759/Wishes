@@ -10,8 +10,8 @@ const CustomEvents: React.FC = () => {
           Discover
         </span>
 
-        <h2 className="font-sloop text-3xl md:text-4xl lg:text-[70px] font-light text-[#5a4d41] capatalize  leading-[1.4] mb-12 max-w-lg">
-          Our Custom Creations<br /> For Your Events
+        <h2 className="font-jost text-3xl md:text-[40px] font-light text-[#5a4d41]  leading-[0.9] mb-12 max-w-lg">
+          <span className="font-burgues text-[50px] md:text-[145px]">o</span>ur Custom Creations<br /> <span className="font-burgues text-[50px] md:text-[60px]">F</span>or Your Events
         </h2>
 
         <div className="flex flex-col sm:flex-row items-center gap-8 sm:gap-6">

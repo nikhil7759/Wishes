@@ -539,11 +539,7 @@ const products = [
 
 const ShopSection: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('Sweets');
-  const [visibleCount, setVisibleCount] = useState(16);
-
-  useEffect(() => {
-    setVisibleCount(window.innerWidth < 768 ? 8 : 16);
-  }, [activeCategory]);
+  const [visibleCount, setVisibleCount] = useState(window.innerWidth < 768 ? 8 : 16);
 
   return (
     <section className="w-full pb-16 md:pb-20 font-jost bg-[#f8f0e5] relative overflow-hidden select-none z-0">
@@ -578,7 +574,10 @@ const ShopSection: React.FC = () => {
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setActiveCategory(category)}
+              onClick={() => {
+                setActiveCategory(category);
+                setVisibleCount(window.innerWidth < 768 ? 8 : 16);
+              }}
               className={`cursor-pointer pb-4 text-[11px] md:text-[13px] tracking-[0.2em] uppercase transition-all duration-300 relative ${activeCategory === category
                 ? 'text-[#2b4c3b] font-medium'
                 : 'text-gray-500 hover:text-gray-800'
@@ -596,7 +595,7 @@ const ShopSection: React.FC = () => {
 
         {/* Product Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 pt-6 px-2">
-          {products.filter(p => p.category === activeCategory).slice(0, visibleCount).map((product, index) => {
+          {products.filter(p => p.category === activeCategory).slice(0, visibleCount).map((product) => {
             return (
               <a
                 key={product.id}
@@ -613,7 +612,7 @@ const ShopSection: React.FC = () => {
 
 
                 {/* Top Sparkles (Decorative) */}
-                <div className="absolute top-4 left-6 text-[#d1b19a] opacity-50 text-xl font-light">
+                <div className="absolute top-2 left-6 text-[#d1b19a] opacity-50 text-xl font-light">
                   ✦
                 </div>
 

@@ -37,10 +37,10 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/shop', label: 'Shop' },
-    { to: '/', label: 'Bulk Order' },
-    { to: '/', label: 'Gifting' },
-    { to: '/', label: 'Contact' },
-    { to: '/', label: 'Order Online' },
+    { to: '/bulk-order', label: 'Bulk Order' },
+    { to: '/gifting', label: 'Gifting' },
+    { to: '/contact', label: 'Contact' },
+    { to: '/shop', label: 'Order Online' },
   ];
 
   return (

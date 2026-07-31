@@ -14,7 +14,7 @@ const ContactPage: React.FC = () => {
         <div className="text-center px-6 md:px-12 relative z-10 max-w-4xl mx-auto">
           {/* Main Title matching Shop / Bulk Order Section Pattern */}
           <h1 className="font-jost text-3xl md:text-[40px] font-light text-black capitalize leading-[1]">
-            <span className="font-burgues text-[65px] md:text-[145px] uppercase -mr-2">
+            <span className="font-burgues text-[65px] md:text-[65px] uppercase mr-0">
               G
             </span>
             et In Touch With Us
@@ -138,34 +138,7 @@ const ContactPage: React.FC = () => {
       </section>
 
       {/* ── Email CTA ── */}
-      <section className="contact-email-section">
-        <div className="contact-email-inner">
-          {/* Decorative rings */}
-          <div className="contact-email-ring" />
 
-          <div className="relative z-10 flex flex-col items-center text-center px-6">
-            <span className="contact-email-icon-wrap">
-              <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-              </svg>
-            </span>
-
-            <h2 className="contact-email-heading">Drop Us a Mail</h2>
-            <p className="contact-email-sub">For bespoke orders, collaborations &amp; enquiries</p>
-
-            <a
-              href="mailto:info@wishesindia.co.in"
-              className="contact-email-link"
-            >
-              info@wishesindia.co.in
-            </a>
-
-            <a href="mailto:info@wishesindia.co.in" className="contact-email-btn">
-              Send Message
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* ── Scoped Styles ── */}
       <style>{`
@@ -254,9 +227,9 @@ const ContactPage: React.FC = () => {
           margin-bottom: 6px;
         }
         .sc-name {
-          font-family: 'Burgues Script', 'Sloop', cursive;
-          font-size: clamp(2rem, 4vw, 2.8rem);
-          font-weight: 400;
+          
+          font-size: clamp(2rem, 4vw, 2rem);
+          font-weight: 300;
           color: #f5ede0;
           line-height: 1.1;
           margin-bottom: 10px;

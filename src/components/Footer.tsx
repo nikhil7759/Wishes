@@ -87,7 +87,8 @@ const Footer: React.FC = () => {
         {/* Bottom Bar: Copyright on Left, Policies & Socials on Right */}
         <div className="border-t border-black/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="font-jost text-[13px] md:text-[14px] text-black font-light order-2 md:order-1 text-center md:text-left">
-            © {new Date().getFullYear()} Wishes by Om Sweets. All rights reserved.
+            <p>© {new Date().getFullYear()} Wishes by Om Sweets. All rights reserved.</p>
+            <p className="text-[12px] text-black/60 mt-1">Designed by Madlyn studio de design</p>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-8 order-1 md:order-2">

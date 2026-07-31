@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const categories = ['Sweets', 'Bar', 'Macaron', 'Namkeen', 'Box', 'Cake'];
 
@@ -623,6 +623,7 @@ const ShopSection: React.FC = () => {
                     alt={product.name}
                     className="w-[90%] h-[90%] object-contain transition-transform duration-700 ease-out group-hover:scale-105 drop-shadow-md"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
 

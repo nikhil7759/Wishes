@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
     { to: '/', label: 'Home' },
     { to: '/shop', label: 'Shop' },
     { to: '/bulk-order', label: 'Bulk Order' },
-    { to: '/gifting', label: 'Gifting' },
+
     { to: '/contact', label: 'Contact' },
     { to: '/shop', label: 'Order Online' },
   ];
@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
         {/* Center Logo */}
         <div className="flex-1 flex justify-center items-center">
           <Link to="/" className="flex flex-col items-center">
-            <img src="/logo/wishes%20logo1.png" alt="Wishes Logo" className="h-10 md:h-15 w-auto object-contain transition-all duration-300" />
+            <img src="/logo/wishes%20logo1.png" alt="Wishes Logo" className="h-10 md:h-15 w-auto object-contain transition-all duration-300" decoding="async" />
             {/* <span className="mt-1 text-[8px] md:text-[9px] tracking-[0.3em]">By Om Sweets</span> */}
           </Link>
         </div>

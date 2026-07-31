@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const BulkOrder: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +11,9 @@ const BulkOrder: React.FC = () => {
     quantity: '',
     message: '',
   });
+
+  // ... rest
+
 
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -115,6 +119,10 @@ const BulkOrder: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#f8f0e5] pt-24 md:pt-28 pb-20 font-jost select-none">
+      <SEO
+        title="Corporate & Bulk Gifting | Wishes by Om Sweets"
+        description="Bespoke corporate gifting hampers, luxury wedding return gifts, and custom sweet boxes tailored for events and celebrations by Wishes by Om Sweets."
+      />
 
       {/* ========================================================================= */}
       {/* SECTION 1: PINKISH HERO HEADER BANNER WITH SCALLOPED PATTERN (LIKE SHOP)    */}
@@ -256,7 +264,7 @@ const BulkOrder: React.FC = () => {
 
                   {/* Step Content */}
                   <div>
-                    <h3 className="font-jost text-[16px] md:text-[17px] font-medium text-[#1d2b45] uppercase tracking-wide">
+                    <h3 className="font-jost text-[16px] md:text-[17px] font-normal text-[#1d2b45] leading-snug">
                       {step.title}
                     </h3>
                     <p className="font-jost font-light text-[14px] text-[#555] mt-1 leading-relaxed">

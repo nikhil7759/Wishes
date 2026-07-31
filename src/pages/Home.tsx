@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import PremiumCollection from '../components/PremiumCollection';
 import FullScreenCarousel from '../components/FullScreenCarousel';
@@ -12,6 +13,10 @@ import BoutiqueSection from '../components/BoutiqueSection';
 const Home: React.FC = () => {
   return (
     <>
+      <SEO
+        title="Wishes by Om Sweets | Luxury Gifting, Artisanal Sweets & Floral Couture"
+        description="Experience the magic of Wishes by Om Sweets. Hand-crafted luxury chocolates, artisanal confections, custom floral services, and bespoke luxury gift boxes."
+      />
       <Hero />
       <PremiumCollection />
       <FullScreenCarousel />
@@ -26,3 +31,4 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+

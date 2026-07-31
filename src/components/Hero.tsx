@@ -14,6 +14,7 @@ const Hero: React.FC = () => {
           loop
           muted
           playsInline
+          preload="metadata"
           className="w-full h-full object-cover"
         >
           <source src="/Images/Sweets.mp4" type="video/mp4" />

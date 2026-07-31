@@ -143,7 +143,7 @@ const Footer: React.FC = () => {
 
         {/* Studio Design Credit Line */}
         <div className="mt-10 pt-6 border-t border-black/10 text-center font-jost text-[11px] md:text-[12px] uppercase tracking-[0.22em] text-[#5a4d41]">
-          DESIGNED BY <span className="underline underline-offset-4 font-normal hover:opacity-80 transition-opacity">MADLYN STUDIO DE DESIGN</span>
+          DESIGNED BY <span className="cursor-pointer underline underline-offset-4 font-normal hover:opacity-80 transition-opacity">MADLYN STUDIO DE DESIGN</span>
         </div>
 
       </div>

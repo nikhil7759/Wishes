@@ -348,41 +348,45 @@ const BulkOrder: React.FC = () => {
         </div>
 
         {/* ========================================================================= */}
-        {/* SECTION 5: BULK ORDER INQUIRY FORM (WHITE CONTAINER CARD)                 */}
+        {/* SECTION 5: BULK ORDER INQUIRY FORM (LUXURY CONCIERGE CARD)                */}
         {/* ========================================================================= */}
         <div id="bulk-inquiry-form" className="max-w-4xl mx-auto">
-          <div className="bg-[#fffdfa] border border-[#e8dcc8] rounded-xl shadow-xl p-8 sm:p-12 md:p-16 relative overflow-hidden">
+          <div className="bg-white border border-[#c19e6e]/30 rounded-2xl shadow-[0_20px_50px_rgba(44,31,24,0.08)] p-8 sm:p-12 md:p-16 relative overflow-hidden">
 
-            {/* Inner Dashed Frame */}
-            <div className="absolute inset-[8px] sm:inset-[12px] border border-dashed border-[#d1b19a]/70 rounded-lg pointer-events-none opacity-60" />
+            {/* Subtle Gold Ambient Corner Accents */}
+            <div className="absolute -top-24 -left-24 w-48 h-48 bg-[#c19e6e]/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-[#c19e6e]/10 rounded-full blur-3xl pointer-events-none" />
 
-            {/* Top Sparkle Ornament */}
-            <div className="text-center mb-8 relative z-10">
-              <span className="text-[#d1b19a] text-xl block mb-1">✦</span>
-              <h2 className="font-jost font-light text-3xl sm:text-4xl text-[#5a4d41] mb-3">
-                <span className="font-burgues text-[65px] inline-block -mr-1">R</span>equest a Custom Quote
+            {/* Top Eyebrow & Header */}
+            <div className="text-center mb-10 relative z-10">
+              <span className="inline-block font-jost text-[11px] uppercase tracking-[0.3em] text-[#c19e6e] font-medium mb-3 bg-[#f8f0e5] px-4 py-1.5 rounded-full border border-[#c19e6e]/20">
+                Bespoke Concierge
+              </span>
+              <h2 className="font-jost font-light text-3xl sm:text-4xl lg:text-[42px] text-[#2c1f18] mb-4 leading-tight">
+                Request a Custom Quote
               </h2>
-              <p className="font-jost font-light text-base text-[#666] max-w-xl mx-auto leading-relaxed">
-                Please provide your details below and our corporate gifting concierges will get back to you within 24 hours with custom options and pricing.
+              <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-[#c19e6e] to-transparent mx-auto mb-4" />
+              <p className="font-jost font-light text-sm sm:text-base text-[#6b5a4e] max-w-xl mx-auto leading-relaxed">
+                Provide your event details below and our master gifting concierges will curate custom options and pricing for you within 24 hours.
               </p>
             </div>
 
             {submitted ? (
               /* Success Submission Banner */
-              <div className="bg-[#f8f0e5] border border-[#d1b19a] p-8 md:p-12 rounded-lg text-center relative z-10 animate-fadeIn">
-                <div className="w-16 h-16 rounded-full bg-[#f4c3c0] text-[#5a4d41] flex items-center justify-center mx-auto mb-4 text-2xl shadow-md border border-[#d1b19a]/50">
+              <div className="bg-[#FAF7F4] border border-[#c19e6e]/30 p-8 md:p-12 rounded-xl text-center relative z-10 animate-fadeIn">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#d4ad70] to-[#c19e6e] text-white flex items-center justify-center mx-auto mb-4 text-2xl shadow-md">
                   ✓
                 </div>
-                <h3 className="font-jost font-medium text-2xl text-[#5a4d41] mb-2 uppercase tracking-wide">
+                <h3 className="font-jost font-medium text-2xl text-[#2c1f18] mb-2 uppercase tracking-wide">
                   Thank You, {formData.name || 'Valued Guest'}!
                 </h3>
-                <p className="font-jost font-light text-base text-[#555] max-w-md mx-auto mb-6">
-                  We have received your bulk order inquiry. Our gifting specialist will connect with you shortly via phone or email.
+                <p className="font-jost font-light text-base text-[#6b5a4e] max-w-md mx-auto mb-6">
+                  We have received your bulk order inquiry. Our senior gifting specialist will reach out to you shortly.
                 </p>
                 <button
                   type="button"
                   onClick={resetForm}
-                  className="bg-[#d1b19a] hover:bg-[#b49377] text-[#5a4d41] hover:text-white font-jost text-xs uppercase font-medium py-3 px-8 border border-[#d1b19a] transition-all duration-300 rounded-sm cursor-pointer"
+                  className="bg-[#2c1f18] hover:bg-[#1a1210] text-[#f5ede0] font-jost text-xs uppercase tracking-[0.25em] font-medium py-3.5 px-8 border border-[#c19e6e]/40 transition-all duration-300 rounded-sm cursor-pointer shadow-md"
                 >
                   Submit Another Inquiry
                 </button>
@@ -395,8 +399,8 @@ const BulkOrder: React.FC = () => {
 
                   {/* Name Field */}
                   <div>
-                    <label htmlFor="name" className="block font-jost text-xs uppercase tracking-widest text-[#5a4d41] font-medium mb-2">
-                      Full Name <span className="text-red-500">*</span>
+                    <label htmlFor="name" className="block font-jost text-[11px] uppercase tracking-[0.2em] text-[#6b5a4e] font-medium mb-2">
+                      Full Name <span className="text-[#c19e6e]">*</span>
                     </label>
                     <input
                       type="text"
@@ -405,15 +409,15 @@ const BulkOrder: React.FC = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="e.g. Ananya Sharma"
-                      className="w-full bg-[#f8f0e5] border border-[#e8dcc8] focus:border-[#d1b19a] focus:ring-1 focus:ring-[#d1b19a] rounded-sm px-4 py-3 text-sm text-[#333] placeholder-gray-400 outline-none transition-all"
+                      placeholder="Ananya Sharma"
+                      className="w-full bg-[#faf7f4] border border-[#e5d5c5] focus:border-[#c19e6e] focus:bg-white focus:ring-1 focus:ring-[#c19e6e] rounded-md px-4 py-3.5 text-sm text-[#2c1f18] placeholder-[#a8978a] outline-none transition-all duration-300"
                     />
                   </div>
 
                   {/* Email Field */}
                   <div>
-                    <label htmlFor="email" className="block font-jost text-xs uppercase tracking-widest text-[#5a4d41] font-medium mb-2">
-                      Email Address <span className="text-red-500">*</span>
+                    <label htmlFor="email" className="block font-jost text-[11px] uppercase tracking-[0.2em] text-[#6b5a4e] font-medium mb-2">
+                      Corporate Email <span className="text-[#c19e6e]">*</span>
                     </label>
                     <input
                       type="email"
@@ -422,8 +426,8 @@ const BulkOrder: React.FC = () => {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="e.g. ananya@company.com"
-                      className="w-full bg-[#f8f0e5] border border-[#e8dcc8] focus:border-[#d1b19a] focus:ring-1 focus:ring-[#d1b19a] rounded-sm px-4 py-3 text-sm text-[#333] placeholder-gray-400 outline-none transition-all"
+                      placeholder="ananya@company.com"
+                      className="w-full bg-[#faf7f4] border border-[#e5d5c5] focus:border-[#c19e6e] focus:bg-white focus:ring-1 focus:ring-[#c19e6e] rounded-md px-4 py-3.5 text-sm text-[#2c1f18] placeholder-[#a8978a] outline-none transition-all duration-300"
                     />
                   </div>
 
@@ -433,8 +437,8 @@ const BulkOrder: React.FC = () => {
 
                   {/* Phone Field */}
                   <div>
-                    <label htmlFor="phone" className="block font-jost text-xs uppercase tracking-widest text-[#5a4d41] font-medium mb-2">
-                      Phone Number <span className="text-red-500">*</span>
+                    <label htmlFor="phone" className="block font-jost text-[11px] uppercase tracking-[0.2em] text-[#6b5a4e] font-medium mb-2">
+                      Phone Number <span className="text-[#c19e6e]">*</span>
                     </label>
                     <input
                       type="tel"
@@ -443,14 +447,14 @@ const BulkOrder: React.FC = () => {
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="e.g. +91 98765 43210"
-                      className="w-full bg-[#f8f0e5] border border-[#e8dcc8] focus:border-[#d1b19a] focus:ring-1 focus:ring-[#d1b19a] rounded-sm px-4 py-3 text-sm text-[#333] placeholder-gray-400 outline-none transition-all"
+                      placeholder="+91 98765 43210"
+                      className="w-full bg-[#faf7f4] border border-[#e5d5c5] focus:border-[#c19e6e] focus:bg-white focus:ring-1 focus:ring-[#c19e6e] rounded-md px-4 py-3.5 text-sm text-[#2c1f18] placeholder-[#a8978a] outline-none transition-all duration-300"
                     />
                   </div>
 
                   {/* Occasion Selection */}
                   <div>
-                    <label htmlFor="occasion" className="block font-jost text-xs uppercase tracking-widest text-[#5a4d41] font-medium mb-2">
+                    <label htmlFor="occasion" className="block font-jost text-[11px] uppercase tracking-[0.2em] text-[#6b5a4e] font-medium mb-2">
                       Occasion / Event Type
                     </label>
                     <select
@@ -458,7 +462,7 @@ const BulkOrder: React.FC = () => {
                       name="occasion"
                       value={formData.occasion}
                       onChange={handleChange}
-                      className="w-full bg-[#f8f0e5] border border-[#e8dcc8] focus:border-[#d1b19a] focus:ring-1 focus:ring-[#d1b19a] rounded-sm px-4 py-3 text-sm text-[#333] outline-none transition-all"
+                      className="w-full bg-[#faf7f4] border border-[#e5d5c5] focus:border-[#c19e6e] focus:bg-white focus:ring-1 focus:ring-[#c19e6e] rounded-md px-4 py-3.5 text-sm text-[#2c1f18] outline-none transition-all duration-300 cursor-pointer"
                     >
                       <option value="Corporate Gifting">Corporate Gifting &amp; Festive Hampers</option>
                       <option value="Wedding">Weddings &amp; Anniversaries</option>
@@ -472,8 +476,8 @@ const BulkOrder: React.FC = () => {
 
                 {/* Message Field */}
                 <div>
-                  <label htmlFor="message" className="block font-jost text-xs uppercase tracking-widest text-[#5a4d41] font-medium mb-2">
-                    Your Message &amp; Requirements <span className="text-red-500">*</span>
+                  <label htmlFor="message" className="block font-jost text-[11px] uppercase tracking-[0.2em] text-[#6b5a4e] font-medium mb-2">
+                    Your Requirements &amp; Estimated Quantity <span className="text-[#c19e6e]">*</span>
                   </label>
                   <textarea
                     id="message"
@@ -482,8 +486,8 @@ const BulkOrder: React.FC = () => {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Please tell us about your estimated guest count / quantity, preferred date, target budget, or special packaging requests..."
-                    className="w-full bg-[#f8f0e5] border border-[#e8dcc8] focus:border-[#d1b19a] focus:ring-1 focus:ring-[#d1b19a] rounded-sm px-4 py-3 text-sm text-[#333] placeholder-gray-400 outline-none transition-all resize-y"
+                    placeholder="Tell us about your estimated guest count, target budget, preferred sweets, or custom box branding preferences..."
+                    className="w-full bg-[#faf7f4] border border-[#e5d5c5] focus:border-[#c19e6e] focus:bg-white focus:ring-1 focus:ring-[#c19e6e] rounded-md px-4 py-3.5 text-sm text-[#2c1f18] placeholder-[#a8978a] outline-none transition-all duration-300 resize-y"
                   />
                 </div>
 
@@ -492,28 +496,28 @@ const BulkOrder: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#d1b19a] hover:bg-[#b49377] text-[#5a4d41] hover:text-white font-jost text-xs uppercase font-medium py-4 px-12 border border-[#d1b19a] transition-all duration-300 shadow-md hover:shadow-lg active:scale-95 rounded-sm cursor-pointer disabled:opacity-50"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#2c1f18] to-[#1e1512] hover:from-[#1e1512] hover:to-[#0a0604] text-[#f5ede0] font-jost text-xs uppercase tracking-[0.25em] font-medium py-4 px-12 border border-[#c19e6e]/40 transition-all duration-300 shadow-lg hover:shadow-xl active:scale-95 rounded-sm cursor-pointer disabled:opacity-50 group"
                   >
                     {isSubmitting ? (
                       <>
-                        <svg className="animate-spin h-4 w-4 text-current" viewBox="0 0 24 24" fill="none">
+                        <svg className="animate-spin h-4 w-4 text-[#c19e6e]" viewBox="0 0 24 24" fill="none">
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                         </svg>
-                        Sending Request...
+                        Curating Options...
                       </>
                     ) : (
                       <>
-                        Submit Bulk Inquiry
-                        <span className="text-base">→</span>
+                        <span>Submit Bulk Inquiry</span>
+                        <span className="text-base text-[#c19e6e] transition-transform duration-300 group-hover:translate-x-1">→</span>
                       </>
                     )}
                   </button>
                 </div>
 
-                <p className="text-center text-[12px] font-jost text-gray-500 font-light mt-3">
+                <p className="text-center text-[13px] font-jost text-[#8b7d72] font-light mt-4">
                   For immediate assistance, call our Gifting Hotline at{' '}
-                  <a href="tel:+919289714461" className="underline font-medium text-[#5a4d41]">
+                  <a href="tel:+919289714461" className="underline font-medium text-[#2c1f18] hover:text-[#c19e6e] transition-colors">
                     +91 92897 14461
                   </a>
                 </p>

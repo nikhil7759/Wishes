@@ -114,7 +114,7 @@ const TopSellingSlider: React.FC = () => {
                 className="px-1 flex-shrink-0"
               >
                 <a
-                  href={item.link}
+
                   className="group flex flex-col items-start focus:outline-none"
                 >
                   {/* Image container matching PremiumCollection */}

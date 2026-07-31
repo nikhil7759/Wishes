@@ -82,7 +82,7 @@ const PremiumCollection: React.FC = () => {
           {collections.map((item) => (
             <div key={item.id} className="relative group filter drop-shadow-md hover:drop-shadow-xl transition-all duration-300 hover:-translate-y-2 h-[420px] sm:h-[600px]">
               <a
-                href={item.link}
+
                 className="flex flex-col items-center justify-start focus:outline-none bg-[#eabfb9] pb-12 h-full w-full"
                 style={{
                   clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 30px), 50% 100%, 0 calc(100% - 30px))'

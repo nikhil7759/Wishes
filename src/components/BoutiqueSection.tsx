@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const BoutiqueSection: React.FC = () => {
   return (
@@ -39,12 +40,12 @@ const BoutiqueSection: React.FC = () => {
         </div>
 
         {/* Call to Action Button matching BuildYourBox */}
-        <a
-          href="/about"
+        <Link
+          to="/contact"
           className="inline-block bg-[#b49377] hover:bg-[#9a7b60] text-white uppercase text-[10px] md:text-[11px] font-medium tracking-[0.15em] px-10 py-4 transition-colors mt-6"
         >
           Visit Us
-        </a>
+        </Link>
 
       </div>
     </section>

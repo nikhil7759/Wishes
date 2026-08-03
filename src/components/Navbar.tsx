@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
     { to: '/shop', label: 'Shop' },
     { to: '/bulk-order', label: 'Bulk Order' },
 
-    { to: '/contact', label: 'Contact' },
+    { to: '/contact', label: 'Visit Us' },
     { to: 'https://airmenus.in/wishes/order', label: 'Order Online', isExternal: true },
     { to: 'https://www.instagram.com/wishes.india/', label: 'Instagram', isExternal: true, isIcon: true },
   ];

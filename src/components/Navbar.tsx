@@ -113,27 +113,23 @@ const Navbar: React.FC = () => {
 
       {/* Side Drawer */}
       <div
-        className={`fixed top-0 left-0 h-full w-[320px] sm:w-[360px] bg-gradient-to-b from-[#1c120c] via-[#140b06] to-[#0a0402] text-[#f5ede0] z-[70] shadow-[0_0_50px_rgba(0,0,0,0.8)] border-r border-[#c19e6e]/20 transition-transform duration-500 cubic-bezier(0.16,1,0.3,1) transform flex flex-col justify-between overflow-y-auto select-none ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
+        className={`fixed top-0 left-0 h-full w-[300px] sm:w-[320px] bg-[#1a0e05] text-white z-[70] shadow-2xl transition-transform duration-300 ease-out transform flex flex-col justify-between overflow-y-auto select-none ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
       >
-        {/* Ambient Gold Glows */}
-        <div className="absolute top-0 right-0 w-48 h-48 bg-[#c19e6e]/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#f4c3c0]/5 rounded-full blur-3xl pointer-events-none" />
-
         {/* Header with Logo & Close Button */}
-        <div className="relative z-10 px-8 pt-8 pb-6 flex items-center justify-between border-b border-white/10">
+        <div className="relative z-10 px-6 pt-6 pb-5 flex items-center justify-between border-b border-white/10">
           <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3">
             <img
               src="/logo/wishes%20logo1.png"
               alt="Wishes Logo"
-              className="h-9 w-auto object-contain brightness-0 invert opacity-90"
+              className="h-8 w-auto object-contain brightness-0 invert"
             />
           </Link>
           <button
             onClick={() => setIsOpen(false)}
             aria-label="Close menu"
-            className="w-9 h-9 rounded-full bg-[#c19e6e]/10 border border-[#c19e6e]/30 text-[#c19e6e] hover:bg-[#c19e6e] hover:text-[#1a0e05] transition-all duration-300 flex items-center justify-center cursor-pointer active:scale-95"
+            className="text-white/70 hover:text-white transition-colors p-1"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>

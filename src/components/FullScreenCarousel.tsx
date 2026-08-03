@@ -6,7 +6,7 @@ const slides = [
     image: '/Images/bgwishes1.jpg',
     overline: 'NOW AVAILABLE',
     title: 'Artisan Craft',
-    subtitle: 'Order on omsweets.com until 8:00 PM and receive your order\nat your home the next day from 10:00 AM*',
+    subtitle: 'Handcrafted luxury sweets & artisanal delicacies,\ndelivered straight to your doorstep with perfection',
     buttonText: 'ORDER NOW'
   },
   {
@@ -14,7 +14,7 @@ const slides = [
     image: '/Images/bgwishes2.jpg',
     overline: 'NEW COLLECTION',
     title: 'Gifting Boxes',
-    subtitle: 'Discover our exclusive range of curated sweet boxes\nperfect for all your special occasions*',
+    subtitle: 'Discover our exclusive range of bespoke gourmet gift boxes,\nelegantly curated for your most cherished celebrations',
     buttonText: 'EXPLORE NOW'
   },
 

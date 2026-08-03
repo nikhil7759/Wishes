@@ -141,8 +141,7 @@ const Navbar: React.FC = () => {
             Navigation Menu
           </span>
 
-          {navLinks.map((link, idx) => {
-            const formattedIndex = String(idx + 1).padStart(2, '0');
+          {navLinks.map((link) => {
             const isActive = location.pathname === link.to;
 
             return link.isExternal ? (
@@ -154,21 +153,16 @@ const Navbar: React.FC = () => {
                 onClick={() => setIsOpen(false)}
                 className="group py-3 flex items-center justify-between border-b border-[#5a4d41]/10 transition-all duration-300 hover:pl-2"
               >
-                <div className="flex items-center gap-4">
-                  <span className="text-[11px] font-mono tracking-widest text-[#b49377] font-medium">
-                    {formattedIndex}
-                  </span>
-                  <span className="text-[15px] uppercase tracking-[0.18em] font-medium text-[#5a4d41] group-hover:text-[#b49377] transition-colors flex items-center gap-2.5">
-                    {link.isIcon ? (
-                      <>
-                        {instagramSvg}
-                        <span>Instagram</span>
-                      </>
-                    ) : (
-                      link.label
-                    )}
-                  </span>
-                </div>
+                <span className="text-[15px] uppercase tracking-[0.18em] font-medium text-[#5a4d41] group-hover:text-[#b49377] transition-colors flex items-center gap-2.5">
+                  {link.isIcon ? (
+                    <>
+                      {instagramSvg}
+                      <span>Instagram</span>
+                    </>
+                  ) : (
+                    link.label
+                  )}
+                </span>
                 <svg className="w-3.5 h-3.5 text-[#5a4d41]/40 group-hover:text-[#b49377] group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
                 </svg>
@@ -180,14 +174,9 @@ const Navbar: React.FC = () => {
                 onClick={() => setIsOpen(false)}
                 className={`group py-3 flex items-center justify-between border-b border-[#5a4d41]/10 transition-all duration-300 hover:pl-2 ${isActive ? 'text-[#b49377]' : ''}`}
               >
-                <div className="flex items-center gap-4">
-                  <span className="text-[11px] font-mono tracking-widest text-[#b49377] font-medium">
-                    {formattedIndex}
-                  </span>
-                  <span className={`text-[15px] uppercase tracking-[0.18em] font-medium group-hover:text-[#b49377] transition-colors ${isActive ? 'text-[#b49377] font-semibold' : 'text-[#5a4d41]'}`}>
-                    {link.label}
-                  </span>
-                </div>
+                <span className={`text-[15px] uppercase tracking-[0.18em] font-medium group-hover:text-[#b49377] transition-colors ${isActive ? 'text-[#b49377] font-semibold' : 'text-[#5a4d41]'}`}>
+                  {link.label}
+                </span>
                 {isActive ? (
                   <span className="w-2 h-2 rounded-full bg-[#b49377]" />
                 ) : (

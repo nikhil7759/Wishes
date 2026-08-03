@@ -113,21 +113,21 @@ const Navbar: React.FC = () => {
 
       {/* Side Drawer */}
       <div
-        className={`fixed top-0 left-0 h-full w-[300px] sm:w-[320px] bg-[#1a0e05] text-white z-[70] shadow-2xl transition-transform duration-300 ease-out transform flex flex-col justify-between overflow-y-auto select-none ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
+        className={`fixed top-0 left-0 h-full w-[300px] sm:w-[340px] bg-[#f8f0e5] text-[#5a4d41] z-[70] shadow-2xl transition-transform duration-300 ease-out transform flex flex-col justify-between overflow-y-auto select-none border-r border-[#5a4d41]/10 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
       >
         {/* Header with Logo & Close Button */}
-        <div className="relative z-10 px-6 pt-6 pb-5 flex items-center justify-between border-b border-white/10">
+        <div className="relative z-10 px-6 pt-6 pb-5 flex items-center justify-between border-b border-[#5a4d41]/10">
           <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3">
             <img
               src="/logo/wishes%20logo1.png"
               alt="Wishes Logo"
-              className="h-8 w-auto object-contain brightness-0 invert"
+              className="h-9 w-auto object-contain"
             />
           </Link>
           <button
             onClick={() => setIsOpen(false)}
             aria-label="Close menu"
-            className="text-white/70 hover:text-white transition-colors p-1"
+            className="text-[#5a4d41]/70 hover:text-[#5a4d41] transition-colors p-1"
           >
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -137,7 +137,7 @@ const Navbar: React.FC = () => {
 
         {/* Navigation Links */}
         <div className="relative z-10 flex-1 px-8 py-8 flex flex-col gap-1 font-jost">
-          <span className="text-[10px] uppercase tracking-[0.3em] text-[#c19e6e] font-medium mb-3 opacity-90">
+          <span className="text-[10px] uppercase tracking-[0.3em] text-[#b49377] font-semibold mb-3">
             Navigation Menu
           </span>
 
@@ -152,13 +152,13 @@ const Navbar: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
-                className="group py-3 flex items-center justify-between border-b border-white/5 transition-all duration-300 hover:pl-2"
+                className="group py-3 flex items-center justify-between border-b border-[#5a4d41]/10 transition-all duration-300 hover:pl-2"
               >
                 <div className="flex items-center gap-4">
-                  <span className="text-[11px] font-mono tracking-widest text-[#c19e6e]/60 group-hover:text-[#c19e6e] transition-colors">
+                  <span className="text-[11px] font-mono tracking-widest text-[#b49377] font-medium">
                     {formattedIndex}
                   </span>
-                  <span className="text-[15px] uppercase tracking-[0.18em] font-light text-[#f5ede0] group-hover:text-[#d4ad70] transition-colors flex items-center gap-2.5">
+                  <span className="text-[15px] uppercase tracking-[0.18em] font-medium text-[#5a4d41] group-hover:text-[#b49377] transition-colors flex items-center gap-2.5">
                     {link.isIcon ? (
                       <>
                         {instagramSvg}
@@ -169,7 +169,7 @@ const Navbar: React.FC = () => {
                     )}
                   </span>
                 </div>
-                <svg className="w-3.5 h-3.5 text-[#c19e6e]/40 group-hover:text-[#c19e6e] group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+                <svg className="w-3.5 h-3.5 text-[#5a4d41]/40 group-hover:text-[#b49377] group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
                 </svg>
               </a>
@@ -178,20 +178,20 @@ const Navbar: React.FC = () => {
                 key={link.to}
                 to={link.to}
                 onClick={() => setIsOpen(false)}
-                className={`group py-3 flex items-center justify-between border-b border-white/5 transition-all duration-300 hover:pl-2 ${isActive ? 'text-[#c19e6e]' : ''}`}
+                className={`group py-3 flex items-center justify-between border-b border-[#5a4d41]/10 transition-all duration-300 hover:pl-2 ${isActive ? 'text-[#b49377]' : ''}`}
               >
                 <div className="flex items-center gap-4">
-                  <span className="text-[11px] font-mono tracking-widest text-[#c19e6e]/60 group-hover:text-[#c19e6e] transition-colors">
+                  <span className="text-[11px] font-mono tracking-widest text-[#b49377] font-medium">
                     {formattedIndex}
                   </span>
-                  <span className={`text-[15px] uppercase tracking-[0.18em] font-light group-hover:text-[#d4ad70] transition-colors ${isActive ? 'text-[#c19e6e] font-normal' : 'text-[#f5ede0]'}`}>
+                  <span className={`text-[15px] uppercase tracking-[0.18em] font-medium group-hover:text-[#b49377] transition-colors ${isActive ? 'text-[#b49377] font-semibold' : 'text-[#5a4d41]'}`}>
                     {link.label}
                   </span>
                 </div>
                 {isActive ? (
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#c19e6e]" />
+                  <span className="w-2 h-2 rounded-full bg-[#b49377]" />
                 ) : (
-                  <svg className="w-3.5 h-3.5 text-white/20 group-hover:text-[#c19e6e] group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+                  <svg className="w-3.5 h-3.5 text-[#5a4d41]/30 group-hover:text-[#b49377] group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                   </svg>
                 )}
@@ -201,19 +201,19 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Bottom Concierge / Social Block */}
-        <div className="relative z-10 px-8 pb-8 pt-4 border-t border-white/10 flex flex-col gap-4 font-jost">
+        <div className="relative z-10 px-8 pb-8 pt-4 border-t border-[#5a4d41]/10 flex flex-col gap-4 font-jost">
           <a
             href="https://airmenus.in/wishes/order"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsOpen(false)}
-            className="w-full text-center bg-gradient-to-r from-[#d4ad70] to-[#c19e6e] text-[#1a0e05] uppercase text-[11px] font-medium tracking-[0.2em] py-3.5 rounded-sm hover:opacity-90 transition-opacity shadow-lg"
+            className="w-full text-center bg-[#b49377] text-white uppercase text-[11px] font-medium tracking-[0.2em] py-3.5 rounded-sm hover:bg-[#a18167] transition-colors shadow-md"
           >
             Order Online Now
           </a>
 
           <div className="flex items-center justify-between pt-2">
-            <span className="text-[11px] uppercase tracking-widest text-[#a8978a] font-light">
+            <span className="text-[11px] uppercase tracking-widest text-[#5a4d41]/70 font-medium">
               Follow Us
             </span>
             <div className="flex items-center gap-3">
@@ -221,7 +221,7 @@ const Navbar: React.FC = () => {
                 href="https://www.instagram.com/wishes.india/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-white/5 border border-[#c19e6e]/30 flex items-center justify-center text-[#c19e6e] hover:bg-[#c19e6e] hover:text-[#1a0e05] transition-all"
+                className="w-8 h-8 rounded-full bg-white border border-[#5a4d41]/20 flex items-center justify-center text-[#5a4d41] hover:border-[#b49377] hover:text-[#b49377] transition-all shadow-sm"
                 aria-label="Instagram"
               >
                 {instagramSvg}
@@ -230,7 +230,7 @@ const Navbar: React.FC = () => {
                 href="https://www.facebook.com/profile.php?id=61592080582387"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-white/5 border border-[#c19e6e]/30 flex items-center justify-center text-[#c19e6e] hover:bg-[#c19e6e] hover:text-[#1a0e05] transition-all"
+                className="w-8 h-8 rounded-full bg-white border border-[#5a4d41]/20 flex items-center justify-center text-[#5a4d41] hover:border-[#b49377] hover:text-[#b49377] transition-all shadow-sm"
                 aria-label="Facebook"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">

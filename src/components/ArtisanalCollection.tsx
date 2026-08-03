@@ -119,7 +119,7 @@ const ArtisanalCollection: React.FC = () => {
       <div className="flex justify-center mt-16">
         <Link
           to="/shop"
-          className="inline-block bg-[#d1b19a] hover:bg-[#d1b19a] text-[#5a4d41] font-jost text-xs uppercase font-medium py-3 px-8 border border-[#d1b19a] transition-all duration-300 active:scale-95 shadow-sm hover:shadow-md cursor-pointer rounded-sm text-center"
+          className="inline-block bg-[#b49377] hover:bg-[#9a7b60] text-white uppercase text-[10px] md:text-[11px] font-medium tracking-[0.15em] px-10 py-4 transition-colors shadow-sm"
         >
           Explore All
         </Link>

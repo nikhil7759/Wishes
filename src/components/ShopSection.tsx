@@ -600,52 +600,48 @@ const ShopSection: React.FC = () => {
               <a
                 key={product.id}
                 href={'#'}
-                className="group relative flex flex-col items-center focus:outline-none p-0 bg-[#fffdfa] w-full  transition-all duration-300 hover:shadow-lg mt-4 sm:mt-0"
-                style={{
-                  border: '1px solid #e8dcc8',
-                  borderRadius: '8px',
-                }}
+                className="group relative flex flex-col items-center focus:outline-none p-2 bg-[#fffdfa] w-full transition-all duration-500 hover:shadow-xl hover:-translate-y-2 mt-4 sm:mt-0 rounded-2xl border border-[#e8dcc8]/60 overflow-hidden"
               >
                 {/* Inner dashed/dotted border */}
-                <div className="absolute inset-[6px] border border-dashed border-[#d1b19a] rounded-sm pointer-events-none opacity-50" />
+                <div className="absolute inset-[6px] border border-dashed border-[#d1b19a] rounded-[10px] pointer-events-none opacity-40 group-hover:opacity-70 transition-opacity duration-500" />
 
 
 
                 {/* Top Sparkles (Decorative) */}
-                <div className="absolute top-2 left-6 text-[#d1b19a] opacity-50 text-xl font-light">
+                <div className="absolute top-4 left-6 text-[#d1b19a] opacity-60 text-xl font-light group-hover:text-[#b49377] group-hover:scale-110 transition-all duration-500">
                   ✦
                 </div>
 
                 {/* Image Container */}
-                <div className="w-full flex items-center justify-center relative z-10 mt-6 mb-2 h-48 md:h-44 shrink-0">
+                <div className="w-full flex items-center justify-center relative z-10 mt-6 mb-2 h-48 md:h-52 shrink-0">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-[90%] h-[90%] object-contain transition-transform duration-700 ease-out group-hover:scale-105 drop-shadow-md"
+                    className="w-[90%] h-[90%] object-contain transition-transform duration-700 ease-out group-hover:scale-110 drop-shadow-md"
                     loading="lazy"
                     decoding="async"
                   />
                 </div>
 
                 {/* Text Container */}
-                <div className="flex flex-col flex-grow items-center justify-start w-full relative z-10">
+                <div className="flex flex-col flex-grow items-center justify-start w-full relative z-10 pb-4">
                   {/* Title */}
-                  <h3 className="font-jost font-normal text-[15px] md:text-[14px] text-[#5a4d41] uppercase text-center w-full px-2">
+                  <h3 className="font-jost font-medium text-[17px] md:text-[18px] text-[#4a3f35] uppercase text-center w-full px-4 group-hover:text-[#b49377] transition-colors duration-300">
                     {product.name}
                   </h3>
 
                   {/* Description */}
-                  <p className="font-jost font-light text-[12px] text-gray-500 text-center px-4 mt-2 mb-4 w-full">
+                  <p className="font-jost font-light text-[13px] md:text-[14px] text-gray-600 text-center px-5 mt-2 mb-4 w-full leading-relaxed">
                     {product.description}
                   </p>
 
                   {/* Decorative bottom line */}
-                  <div className="flex items-center justify-center w-full gap-3 mt-auto mb-9 opacity-70">
-                    <div className="h-[1px] w-10 bg-[#d1b19a]"></div>
-                    <svg className="w-2.5 h-2.5 text-[#d1b19a] fill-current" viewBox="0 0 24 24">
+                  <div className="flex items-center justify-center w-full gap-3 mt-auto mb-4 opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="h-[1px] w-12 bg-[#d1b19a] group-hover:bg-[#b49377] transition-colors duration-300"></div>
+                    <svg className="w-3 h-3 text-[#d1b19a] group-hover:text-[#b49377] fill-current transition-colors duration-300" viewBox="0 0 24 24">
                       <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
                     </svg>
-                    <div className="h-[1px] w-10 bg-[#d1b19a]"></div>
+                    <div className="h-[1px] w-12 bg-[#d1b19a] group-hover:bg-[#b49377] transition-colors duration-300"></div>
                   </div>
                 </div>
               </a>

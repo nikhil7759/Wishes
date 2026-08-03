@@ -11,9 +11,9 @@ const Footer: React.FC = () => {
             {/* Logo brightness-0 turns the red logo black for premium luxury contrast */}
             <a href="/" className="mb-6 block">
               <img
-                src="/logo/wishes%20logo.png"
+                src="/logo/wishes%20logo1.png"
                 alt="Wishes Logo"
-                className="h-12 w-auto object-contain brightness-0"
+                className="h-12 w-auto object-contain"
               />
             </a>
 

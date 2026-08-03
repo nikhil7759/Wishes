@@ -351,7 +351,7 @@ const BulkOrder: React.FC = () => {
         {/* SECTION 5: BULK ORDER INQUIRY FORM (LUXURY CONCIERGE CARD)                */}
         {/* ========================================================================= */}
         <div id="bulk-inquiry-form" className="max-w-4xl mx-auto">
-          <div className="bg-white border border-[#c19e6e]/30 rounded-2xl shadow-[0_20px_50px_rgba(44,31,24,0.08)] p-8 sm:p-12 md:p-16 relative overflow-hidden">
+          <div className="bg-[#eabfb9] border border-[#c19e6e]/30 rounded-2xl shadow-[0_20px_50px_rgba(44,31,24,0.08)] p-8 sm:p-12 md:p-16 relative overflow-hidden">
 
             {/* Subtle Gold Ambient Corner Accents */}
             <div className="absolute -top-24 -left-24 w-48 h-48 bg-[#c19e6e]/10 rounded-full blur-3xl pointer-events-none" />
@@ -359,9 +359,9 @@ const BulkOrder: React.FC = () => {
 
             {/* Top Eyebrow & Header */}
             <div className="text-center mb-10 relative z-10">
-              <span className="inline-block font-jost text-[11px] uppercase tracking-[0.3em] text-[#c19e6e] font-medium mb-3 bg-[#f8f0e5] px-4 py-1.5 rounded-full border border-[#c19e6e]/20">
+              {/* <span className="inline-block font-jost text-[11px] uppercase tracking-[0.3em] text-[#c19e6e] font-medium mb-3 bg-[#f8f0e5] px-4 py-1.5 rounded-full border border-[#c19e6e]/20">
                 Bespoke Concierge
-              </span>
+              </span> */}
               <h2 className="font-jost font-light text-3xl sm:text-4xl lg:text-[42px] text-[#2c1f18] mb-4 leading-tight">
                 Request a Custom Quote
               </h2>
@@ -409,7 +409,7 @@ const BulkOrder: React.FC = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="Ananya Sharma"
+
                       className="w-full bg-[#faf7f4] border border-[#e5d5c5] focus:border-[#c19e6e] focus:bg-white focus:ring-1 focus:ring-[#c19e6e] rounded-md px-4 py-3.5 text-sm text-[#2c1f18] placeholder-[#a8978a] outline-none transition-all duration-300"
                     />
                   </div>
@@ -417,7 +417,7 @@ const BulkOrder: React.FC = () => {
                   {/* Email Field */}
                   <div>
                     <label htmlFor="email" className="block font-jost text-[11px] uppercase tracking-[0.2em] text-[#6b5a4e] font-medium mb-2">
-                      Corporate Email <span className="text-[#c19e6e]">*</span>
+                      Email <span className="text-[#c19e6e]">*</span>
                     </label>
                     <input
                       type="email"
@@ -426,7 +426,7 @@ const BulkOrder: React.FC = () => {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="ananya@company.com"
+
                       className="w-full bg-[#faf7f4] border border-[#e5d5c5] focus:border-[#c19e6e] focus:bg-white focus:ring-1 focus:ring-[#c19e6e] rounded-md px-4 py-3.5 text-sm text-[#2c1f18] placeholder-[#a8978a] outline-none transition-all duration-300"
                     />
                   </div>
@@ -447,7 +447,7 @@ const BulkOrder: React.FC = () => {
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+91 98765 43210"
+
                       className="w-full bg-[#faf7f4] border border-[#e5d5c5] focus:border-[#c19e6e] focus:bg-white focus:ring-1 focus:ring-[#c19e6e] rounded-md px-4 py-3.5 text-sm text-[#2c1f18] placeholder-[#a8978a] outline-none transition-all duration-300"
                     />
                   </div>
@@ -486,7 +486,7 @@ const BulkOrder: React.FC = () => {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tell us about your estimated guest count, target budget, preferred sweets, or custom box branding preferences..."
+
                     className="w-full bg-[#faf7f4] border border-[#e5d5c5] focus:border-[#c19e6e] focus:bg-white focus:ring-1 focus:ring-[#c19e6e] rounded-md px-4 py-3.5 text-sm text-[#2c1f18] placeholder-[#a8978a] outline-none transition-all duration-300 resize-y"
                   />
                 </div>

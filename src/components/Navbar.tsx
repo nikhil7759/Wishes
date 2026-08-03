@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
     { to: '/bulk-order', label: 'Bulk Order' },
 
     { to: '/contact', label: 'Contact' },
-    { to: '/shop', label: 'Order Online' },
+    { to: 'https://airmenus.in/wishes/order', label: 'Order Online', isExternal: true },
   ];
 
   return (
@@ -58,9 +58,15 @@ const Navbar: React.FC = () => {
           {/* Desktop Nav Links */}
           <div className="hidden lg:flex items-center gap-5 xl:gap-6">
             {navLinks.slice(0, 3).map((link) => (
-              <Link key={link.to} to={link.to} className="hover:opacity-70 transition-opacity whitespace-nowrap uppercase">
-                {link.label}
-              </Link>
+              link.isExternal ? (
+                <a key={link.to} href={link.to} target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity whitespace-nowrap uppercase">
+                  {link.label}
+                </a>
+              ) : (
+                <Link key={link.to} to={link.to} className="hover:opacity-70 transition-opacity whitespace-nowrap uppercase">
+                  {link.label}
+                </Link>
+              )
             ))}
           </div>
         </div>
@@ -78,9 +84,15 @@ const Navbar: React.FC = () => {
           {/* Desktop Nav Links */}
           <div className="hidden lg:flex items-center gap-5 xl:gap-6">
             {navLinks.slice(3, 6).map((link) => (
-              <Link key={link.to} to={link.to} className="hover:opacity-70 transition-opacity whitespace-nowrap uppercase">
-                {link.label}
-              </Link>
+              link.isExternal ? (
+                <a key={link.to} href={link.to} target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity whitespace-nowrap uppercase">
+                  {link.label}
+                </a>
+              ) : (
+                <Link key={link.to} to={link.to} className="hover:opacity-70 transition-opacity whitespace-nowrap uppercase">
+                  {link.label}
+                </Link>
+              )
             ))}
           </div>
         </div>
@@ -108,9 +120,15 @@ const Navbar: React.FC = () => {
         {/* Drawer Links */}
         <div className="flex flex-col px-10 gap-6 text-[15px] capitalize font-jost font-light">
           {navLinks.map((link) => (
-            <Link key={link.to} to={link.to} className="hover:text-[#d1b19a] transition-colors py-2 border-b border-white/10" onClick={() => setIsOpen(false)}>
-              {link.label}
-            </Link>
+            link.isExternal ? (
+              <a key={link.to} href={link.to} target="_blank" rel="noopener noreferrer" className="hover:text-[#d1b19a] transition-colors py-2 border-b border-white/10" onClick={() => setIsOpen(false)}>
+                {link.label}
+              </a>
+            ) : (
+              <Link key={link.to} to={link.to} className="hover:text-[#d1b19a] transition-colors py-2 border-b border-white/10" onClick={() => setIsOpen(false)}>
+                {link.label}
+              </Link>
+            )
           ))}
         </div>
       </div>

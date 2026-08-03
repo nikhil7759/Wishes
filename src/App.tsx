@@ -15,6 +15,8 @@ const ContactPage = lazy(() => import('./pages/ContactPage'))
 const TermsPage = lazy(() => import('./pages/TermsPage'))
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage'))
 const ShippingPage = lazy(() => import('./pages/ShippingPage'))
+const CancellationPage = lazy(() => import('./pages/CancellationPage'))
+const AccountDeletionPage = lazy(() => import('./pages/AccountDeletionPage'))
 
 function App() {
   return (
@@ -40,6 +42,8 @@ function App() {
                 <Route path="/terms" element={<TermsPage />} />
                 <Route path="/privacy" element={<PrivacyPage />} />
                 <Route path="/shipping" element={<ShippingPage />} />
+                <Route path="/cancellation" element={<CancellationPage />} />
+                <Route path="/account-deletion" element={<AccountDeletionPage />} />
               </Routes>
             </Suspense>
           </main>

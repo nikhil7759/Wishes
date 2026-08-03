@@ -75,12 +75,12 @@ const Footer: React.FC = () => {
             <Link to="/shipping" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
               Shipping Policy
             </Link>
-            <a href="/cancellation" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
-              Cancellation & Refund Policy
-            </a>
-            <a href="/account-deletion" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
+            <Link to="/cancellation" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
+              Cancellation &amp; Refund Policy
+            </Link>
+            <Link to="/account-deletion" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
               Account Deletion Policy
-            </a>
+            </Link>
           </div>
 
         </div>

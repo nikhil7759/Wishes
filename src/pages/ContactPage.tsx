@@ -366,14 +366,14 @@ const ContactPage: React.FC = () => {
           font-size: 11px;
           letter-spacing: 0.28em;
           text-transform: uppercase;
-          color: #1e1512;
-          background: linear-gradient(135deg, #d4ad70, #c19e6e);
+          color: #ffffff;
+          background: #b49377;
           padding: 14px 36px;
           border-radius: 2px;
           text-decoration: none;
-          transition: opacity 0.25s, transform 0.25s;
+          transition: background-color 0.25s, transform 0.25s;
         }
-        .contact-email-btn:hover { opacity: 0.88; transform: translateY(-2px); }
+        .contact-email-btn:hover { background: #9a7b60; color: #ffffff; transform: translateY(-2px); }
 
         @media (max-width: 640px) {
           .contact-ornament-left,

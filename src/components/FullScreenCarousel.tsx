@@ -74,12 +74,15 @@ const FullScreenCarousel: React.FC = () => {
               {slide.subtitle}
             </p>
 
-            <button
-              className={`mt-10 px-10 py-3 border border-white/80 text-white uppercase text-[11px] tracking-[0.15em] font-medium hover:bg-white hover:text-black transition-colors duration-300 transition-all delay-700 ${index === currentSlide ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+            <a
+              href="https://airmenus.in/wishes/order"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`mt-10 inline-block bg-[#b49377] hover:bg-[#9a7b60] text-white uppercase text-[10px] md:text-[11px] font-medium tracking-[0.15em] px-10 py-4 transition-colors ${index === currentSlide ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                 }`}
             >
               {slide.buttonText}
-            </button>
+            </a>
           </div>
         </div>
       ))}

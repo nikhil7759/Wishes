@@ -6,6 +6,7 @@ import SmoothScroll from './components/SmoothScroll'
 import ScrollToTop from './components/ScrollToTop'
 import Preloader from './components/Preloader'
 import PasswordProtect from './components/PasswordProtect'
+import WhatsAppButton from './components/WhatsAppButton'
 import Home from './pages/Home'
 import './App.css'
 
@@ -26,6 +27,7 @@ function App() {
         <div className="min-h-screen bg-[#f8f0e5] flex flex-col">
           <ScrollToTop />
           <Navbar />
+          <WhatsAppButton />
           <main className="flex-grow">
             <Suspense
               fallback={

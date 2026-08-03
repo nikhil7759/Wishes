@@ -72,9 +72,9 @@ const Footer: React.FC = () => {
 
           {/* RIGHT SIDE: COLUMN 3 (POLICIES) */}
           <div className="md:col-span-3 flex flex-col items-start gap-4 md:mt-2">
-            <a href="/shipping" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
+            <Link to="/shipping" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
               Shipping Policy
-            </a>
+            </Link>
             <a href="/cancellation" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
               Cancellation & Refund Policy
             </a>

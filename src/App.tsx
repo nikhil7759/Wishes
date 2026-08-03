@@ -14,6 +14,7 @@ const BulkOrder = lazy(() => import('./pages/BulkOrder'))
 const ContactPage = lazy(() => import('./pages/ContactPage'))
 const TermsPage = lazy(() => import('./pages/TermsPage'))
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage'))
+const ShippingPage = lazy(() => import('./pages/ShippingPage'))
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/terms" element={<TermsPage />} />
                 <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/shipping" element={<ShippingPage />} />
               </Routes>
             </Suspense>
           </main>

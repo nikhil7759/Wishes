@@ -41,37 +41,38 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* RIGHT SIDE: COLUMN 1 LINKS */}
-          <div className="md:col-span-2 flex flex-col items-start gap-4 md:mt-2">
-            <a href="/bulk-order" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
+          {/* RIGHT SIDE: COLUMN 1 (EXPLORE) */}
+          <div className="md:col-span-3 flex flex-col items-start gap-3 md:mt-2">
+            <span className="font-jost font-medium text-[11px] uppercase tracking-[0.2em] text-[#b49377] mb-1">
+              Explore
+            </span>
+            <Link to="/" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
+              Home
+            </Link>
+            <Link to="/shop" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
+              Shop Menu
+            </Link>
+            <Link to="/bulk-order" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
               Bulk Order
+            </Link>
+            <a
+              href="https://airmenus.in/wishes/order"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all"
+            >
+              Order Online
             </a>
-            <a href="/gifting" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
-              Gifting
-            </a>
-            <a href="/our-packaging" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
-              Our Packaging
-            </a>
-          </div>
-
-          {/* RIGHT SIDE: COLUMN 2 LINKS */}
-          <div className="md:col-span-2 flex flex-col items-start gap-4 md:mt-2">
-            <a href="/about" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
-              About Us
-            </a>
-            <a href="/vision" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
-              Our Vision
-            </a>
-            <a href="/ambience" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
-              Ambience
-            </a>
-            <a href="/contact" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
+            <Link to="/contact" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
               Contact Us
-            </a>
+            </Link>
           </div>
 
-          {/* RIGHT SIDE: COLUMN 3 (POLICIES) */}
-          <div className="md:col-span-3 flex flex-col items-start gap-4 md:mt-2">
+          {/* RIGHT SIDE: COLUMN 2 (POLICIES) */}
+          <div className="md:col-span-4 flex flex-col items-start gap-3 md:mt-2">
+            <span className="font-jost font-medium text-[11px] uppercase tracking-[0.2em] text-[#b49377] mb-1">
+              Customer Care &amp; Policies
+            </span>
             <Link to="/shipping" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
               Shipping Policy
             </Link>
@@ -80,6 +81,12 @@ const Footer: React.FC = () => {
             </Link>
             <Link to="/account-deletion" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
               Account Deletion Policy
+            </Link>
+            <Link to="/privacy" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
+              Privacy Policy
+            </Link>
+            <Link to="/terms" className="font-jost text-[14px] md:text-[15px] text-black hover:underline transition-all">
+              Terms &amp; Conditions
             </Link>
           </div>
 

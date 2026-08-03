@@ -97,7 +97,7 @@ const ContactPage: React.FC = () => {
 
             {/* Studio 2 */}
             <div className="sc-card group">
-              <img src="/Images/about.jpg" alt="Faridabad Studio" className="sc-img" loading="lazy" decoding="async" />
+              <img src="/Images/store image2.jpg" alt="Faridabad Studio" className="sc-img" loading="lazy" decoding="async" />
               <div className="sc-num">02</div>
               <div className="sc-overlay" />
 

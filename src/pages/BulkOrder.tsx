@@ -175,8 +175,9 @@ const BulkOrder: React.FC = () => {
               </span>
             </div>
 
-            <h2 className="font-jost font-light text-3xl sm:text-4xl lg:text-[44px] text-[#5a4d41] mb-8 leading-[1.2]">
-              Perfect for Every Occasion
+            <h2 className="font-jost font-light text-2xl md:text-3xl text-[#5a4d41]">
+              <span className='font-burgues text-[65px]'>P</span>
+              erfect for Every Occasion
             </h2>
 
             {/* List with inverted white cards matching pattern styling */}
@@ -246,8 +247,9 @@ const BulkOrder: React.FC = () => {
               </span>
             </div>
 
-            <h2 className="font-jost font-light text-3xl sm:text-4xl lg:text-[44px] text-[#5a4d41] mb-8 leading-[1.2]">
-              How It Works
+            <h2 className="font-jost font-light text-2xl md:text-3xl text-[#5a4d41]">
+              <span className='font-burgues text-[65px]'>H</span>
+              ow It Works
             </h2>
 
             {/* 4 Steps Timeline with inverted white cards */}
@@ -287,7 +289,7 @@ const BulkOrder: React.FC = () => {
 
           <div className="text-center max-w-2xl mx-auto mb-10 relative z-10">
             <h3 className="font-jost font-light text-2xl md:text-3xl text-[#5a4d41]">
-              <span className="font-burgues text-[50px] inline-block -mr-1">T</span>he Wishes Gifting Promise
+              <span className="font-burgues text-[50px] inline-block mr-1">T</span>he Wishes Gifting Promise
             </h3>
             <p className="font-jost font-light text-sm md:text-base text-[#666] mt-2">
               Uncompromising quality, artisanal craftsmanship, and flawless execution for every order.
@@ -362,8 +364,9 @@ const BulkOrder: React.FC = () => {
               {/* <span className="inline-block font-jost text-[11px] uppercase tracking-[0.3em] text-[#c19e6e] font-medium mb-3 bg-[#f8f0e5] px-4 py-1.5 rounded-full border border-[#c19e6e]/20">
                 Bespoke Concierge
               </span> */}
-              <h2 className="font-jost font-light text-3xl sm:text-4xl lg:text-[42px] text-[#2c1f18] mb-4 leading-tight">
-                Request a Custom Quote
+              <h2 className="font-jost font-light text-2xl md:text-3xl text-[#5a4d41]">
+                <span className='font-burgues text-[50px] inline-block mr-2'>R</span>
+                equest a Custom Quote
               </h2>
               <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-[#c19e6e] to-transparent mx-auto mb-4" />
               <p className="font-jost font-light text-sm sm:text-base text-[#6b5a4e] max-w-xl mx-auto leading-relaxed">
@@ -496,7 +499,7 @@ const BulkOrder: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#2c1f18] to-[#1e1512] hover:from-[#1e1512] hover:to-[#0a0604] text-[#f5ede0] font-jost text-xs uppercase tracking-[0.25em] font-medium py-4 px-12 border border-[#c19e6e]/40 transition-all duration-300 shadow-lg hover:shadow-xl active:scale-95 rounded-sm cursor-pointer disabled:opacity-50 group"
+                    className="bg-[#b49377] hover:bg-[#9a7b60] text-white uppercase text-[10px] md:text-[11px] font-medium tracking-[0.15em] px-10 py-4 transition-colors"
                   >
                     {isSubmitting ? (
                       <>

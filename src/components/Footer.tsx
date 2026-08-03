@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -93,9 +94,9 @@ const Footer: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-8 order-1 md:order-2">
             {/* Privacy Policy & Terms of Conditions */}
             <div className="flex items-center gap-4 font-jost text-[13px] md:text-[14px] text-black font-light">
-              <a href="/privacy" className="hover:underline transition-colors">Privacy Policy</a>
+              <Link to="/privacy" className="hover:underline transition-colors">Privacy Policy</Link>
               <span className="text-black/30 select-none">|</span>
-              <a href="/terms" className="hover:underline transition-colors">Terms & Conditions</a>
+              <Link to="/terms" className="hover:underline transition-colors">Terms &amp; Conditions</Link>
             </div>
 
             {/* Social Media Icons */}

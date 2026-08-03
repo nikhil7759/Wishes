@@ -12,13 +12,15 @@ import './App.css'
 const ShopPage = lazy(() => import('./pages/ShopPage'))
 const BulkOrder = lazy(() => import('./pages/BulkOrder'))
 const ContactPage = lazy(() => import('./pages/ContactPage'))
+const TermsPage = lazy(() => import('./pages/TermsPage'))
+const PrivacyPage = lazy(() => import('./pages/PrivacyPage'))
 
 function App() {
   return (
     <PasswordProtect>
       <SmoothScroll>
         <Preloader />
-        <div className="min-h-screen bg-white flex flex-col">
+        <div className="min-h-screen bg-[#f8f0e5] flex flex-col">
           <ScrollToTop />
           <Navbar />
           <main className="flex-grow">
@@ -34,6 +36,8 @@ function App() {
                 <Route path="/shop" element={<ShopPage />} />
                 <Route path="/bulk-order" element={<BulkOrder />} />
                 <Route path="/contact" element={<ContactPage />} />
+                <Route path="/terms" element={<TermsPage />} />
+                <Route path="/privacy" element={<PrivacyPage />} />
               </Routes>
             </Suspense>
           </main>

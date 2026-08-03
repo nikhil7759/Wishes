@@ -7,7 +7,7 @@ const shippingData = [
     title: 'Delivery Areas',
     content: (
       <p className="text-sm md:text-base text-[#6b5a4e] leading-relaxed font-light">
-        We currently deliver to selected pin codes and locations. You can check delivery availability by entering your location details at checkout. If your area is not serviceable, we'll notify you at the time of placing the order.
+        We currently offer delivery exclusively within <strong className="font-medium text-[#2c1f18]">Delhi NCR</strong> (Delhi, Gurugram, Noida, Greater Noida, Ghaziabad, and Faridabad). To maintain handcrafted freshness and delicate quality, delivery outside Delhi NCR (PAN India) is currently not available.
       </p>
     )
   },
@@ -16,9 +16,9 @@ const shippingData = [
     title: 'Delivery Timeframe',
     content: (
       <div className="space-y-2 text-sm md:text-base text-[#6b5a4e] font-light leading-relaxed">
-        <p>Orders are typically delivered within 2 to 24 hours, depending on the selected delivery slot and product availability.</p>
-        <p>Same-day or next-day delivery options may be available based on location and order time.</p>
-        <p>Delivery timelines may vary during peak seasons, festivals, or due to unforeseen circumstances (e.g., weather, lockdowns).</p>
+        <p>Orders within Delhi NCR are typically delivered within 2 to 24 hours, depending on your selected delivery slot and product availability.</p>
+        <p>Same-day or next-day delivery options are available across Delhi NCR based on order placement time.</p>
+        <p>Delivery timelines may vary during peak festive seasons or due to traffic/weather disruptions.</p>
       </div>
     )
   },

@@ -66,16 +66,20 @@ const termsData = [
     content: (
       <div className="space-y-4 text-sm md:text-base text-[#6b5a4e] font-light leading-relaxed">
         <div>
+          <strong className="font-medium text-[#2c1f18] block mb-1">Coverage Area:</strong>
+          Delivery is available exclusively within Delhi NCR (Delhi, Gurugram, Noida, Greater Noida, Ghaziabad, and Faridabad). PAN India delivery is currently not supported to preserve artisanal freshness.
+        </div>
+        <div>
           <strong className="font-medium text-[#2c1f18] block mb-1">Shipping:</strong>
-          We will ship your order to the delivery address provided at checkout. Delivery times may vary depending on the shipping method selected, the destination, and other factors.
+          We will deliver your order to the address provided at checkout within serviceable Delhi NCR pin codes.
         </div>
         <div>
           <strong className="font-medium text-[#2c1f18] block mb-1">Shipping Costs:</strong>
-          Shipping costs are calculated during checkout based on the delivery location and method. Additional charges may apply for expedited shipping or international orders.
+          Shipping costs are calculated during checkout based on the delivery location within Delhi NCR and method.
         </div>
         <div>
           <strong className="font-medium text-[#2c1f18] block mb-1">Delivery Issues:</strong>
-          If there is an issue with your delivery (e.g., damaged items, delays, or incorrect address), please contact us immediately, and we will assist you in resolving the issue.
+          If there is an issue with your delivery (e.g., damaged items, delays, or incorrect address), please contact us immediately, and we will assist you.
         </div>
       </div>
     )

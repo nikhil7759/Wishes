@@ -113,35 +113,136 @@ const Navbar: React.FC = () => {
 
       {/* Side Drawer */}
       <div
-        className={`fixed top-0 left-0 h-full w-[300px] bg-[#1a0e05] text-white z-[70] shadow-2xl transition-transform duration-300 ease-out transform ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
+        className={`fixed top-0 left-0 h-full w-[320px] sm:w-[360px] bg-gradient-to-b from-[#1c120c] via-[#140b06] to-[#0a0402] text-[#f5ede0] z-[70] shadow-[0_0_50px_rgba(0,0,0,0.8)] border-r border-[#c19e6e]/20 transition-transform duration-500 cubic-bezier(0.16,1,0.3,1) transform flex flex-col justify-between overflow-y-auto select-none ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
       >
-        {/* Close Button */}
-        <div className="flex justify-end p-6">
-          <button onClick={() => setIsOpen(false)} className="focus:outline-none hover:opacity-70 transition-opacity p-2">
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1">
+        {/* Ambient Gold Glows */}
+        <div className="absolute top-0 right-0 w-48 h-48 bg-[#c19e6e]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#f4c3c0]/5 rounded-full blur-3xl pointer-events-none" />
+
+        {/* Header with Logo & Close Button */}
+        <div className="relative z-10 px-8 pt-8 pb-6 flex items-center justify-between border-b border-white/10">
+          <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3">
+            <img
+              src="/logo/wishes%20logo1.png"
+              alt="Wishes Logo"
+              className="h-9 w-auto object-contain brightness-0 invert opacity-90"
+            />
+          </Link>
+          <button
+            onClick={() => setIsOpen(false)}
+            aria-label="Close menu"
+            className="w-9 h-9 rounded-full bg-[#c19e6e]/10 border border-[#c19e6e]/30 text-[#c19e6e] hover:bg-[#c19e6e] hover:text-[#1a0e05] transition-all duration-300 flex items-center justify-center cursor-pointer active:scale-95"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
 
-        {/* Drawer Links */}
-        <div className="flex flex-col px-10 gap-6 text-[15px] capitalize font-jost font-light">
-          {navLinks.map((link) => (
-            link.isExternal ? (
-              <a key={link.to} href={link.to} target="_blank" rel="noopener noreferrer" className="hover:text-[#d1b19a] transition-colors py-2 border-b border-white/10 flex items-center gap-3" onClick={() => setIsOpen(false)}>
-                {link.isIcon ? (
-                  <>
-                    {instagramSvg}
-                    <span>Instagram</span>
-                  </>
-                ) : link.label}
+        {/* Navigation Links */}
+        <div className="relative z-10 flex-1 px-8 py-8 flex flex-col gap-1 font-jost">
+          <span className="text-[10px] uppercase tracking-[0.3em] text-[#c19e6e] font-medium mb-3 opacity-90">
+            Navigation Menu
+          </span>
+
+          {navLinks.map((link, idx) => {
+            const formattedIndex = String(idx + 1).padStart(2, '0');
+            const isActive = location.pathname === link.to;
+
+            return link.isExternal ? (
+              <a
+                key={link.to}
+                href={link.to}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+                className="group py-3 flex items-center justify-between border-b border-white/5 transition-all duration-300 hover:pl-2"
+              >
+                <div className="flex items-center gap-4">
+                  <span className="text-[11px] font-mono tracking-widest text-[#c19e6e]/60 group-hover:text-[#c19e6e] transition-colors">
+                    {formattedIndex}
+                  </span>
+                  <span className="text-[15px] uppercase tracking-[0.18em] font-light text-[#f5ede0] group-hover:text-[#d4ad70] transition-colors flex items-center gap-2.5">
+                    {link.isIcon ? (
+                      <>
+                        {instagramSvg}
+                        <span>Instagram</span>
+                      </>
+                    ) : (
+                      link.label
+                    )}
+                  </span>
+                </div>
+                <svg className="w-3.5 h-3.5 text-[#c19e6e]/40 group-hover:text-[#c19e6e] group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                </svg>
               </a>
             ) : (
-              <Link key={link.to} to={link.to} className="hover:text-[#d1b19a] transition-colors py-2 border-b border-white/10" onClick={() => setIsOpen(false)}>
-                {link.label}
+              <Link
+                key={link.to}
+                to={link.to}
+                onClick={() => setIsOpen(false)}
+                className={`group py-3 flex items-center justify-between border-b border-white/5 transition-all duration-300 hover:pl-2 ${isActive ? 'text-[#c19e6e]' : ''}`}
+              >
+                <div className="flex items-center gap-4">
+                  <span className="text-[11px] font-mono tracking-widest text-[#c19e6e]/60 group-hover:text-[#c19e6e] transition-colors">
+                    {formattedIndex}
+                  </span>
+                  <span className={`text-[15px] uppercase tracking-[0.18em] font-light group-hover:text-[#d4ad70] transition-colors ${isActive ? 'text-[#c19e6e] font-normal' : 'text-[#f5ede0]'}`}>
+                    {link.label}
+                  </span>
+                </div>
+                {isActive ? (
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#c19e6e]" />
+                ) : (
+                  <svg className="w-3.5 h-3.5 text-white/20 group-hover:text-[#c19e6e] group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                  </svg>
+                )}
               </Link>
-            )
-          ))}
+            );
+          })}
+        </div>
+
+        {/* Bottom Concierge / Social Block */}
+        <div className="relative z-10 px-8 pb-8 pt-4 border-t border-white/10 flex flex-col gap-4 font-jost">
+          <a
+            href="https://airmenus.in/wishes/order"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsOpen(false)}
+            className="w-full text-center bg-gradient-to-r from-[#d4ad70] to-[#c19e6e] text-[#1a0e05] uppercase text-[11px] font-medium tracking-[0.2em] py-3.5 rounded-sm hover:opacity-90 transition-opacity shadow-lg"
+          >
+            Order Online Now
+          </a>
+
+          <div className="flex items-center justify-between pt-2">
+            <span className="text-[11px] uppercase tracking-widest text-[#a8978a] font-light">
+              Follow Us
+            </span>
+            <div className="flex items-center gap-3">
+              <a
+                href="https://www.instagram.com/wishes.india/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-white/5 border border-[#c19e6e]/30 flex items-center justify-center text-[#c19e6e] hover:bg-[#c19e6e] hover:text-[#1a0e05] transition-all"
+                aria-label="Instagram"
+              >
+                {instagramSvg}
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61592080582387"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-white/5 border border-[#c19e6e]/30 flex items-center justify-center text-[#c19e6e] hover:bg-[#c19e6e] hover:text-[#1a0e05] transition-all"
+                aria-label="Facebook"
+              >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </>

@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
               <img
                 src="/logo/wishes%20logo1.png"
                 alt="Wishes Logo"
-                className="h-12 w-auto object-contain"
+                className="h-16 w-auto object-contain"
               />
             </a>
 

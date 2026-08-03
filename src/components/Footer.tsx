@@ -110,7 +110,7 @@ const Footer: React.FC = () => {
             <div className="flex gap-4">
               {/* Instagram */}
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/wishes.india/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white flex items-center justify-center shadow-sm hover:scale-105 active:scale-95 transition-all duration-300 hover:shadow-md"
@@ -135,7 +135,7 @@ const Footer: React.FC = () => {
 
               {/* Facebook */}
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=61592080582387"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white flex items-center justify-center shadow-sm hover:scale-105 active:scale-95 transition-all duration-300 hover:shadow-md"

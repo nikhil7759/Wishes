@@ -41,6 +41,7 @@ const Navbar: React.FC = () => {
 
     { to: '/contact', label: 'Contact' },
     { to: 'https://airmenus.in/wishes/order', label: 'Order Online', isExternal: true },
+    { to: 'https://instagram.com', label: 'Follow Us On Insta', isExternal: true },
   ];
 
   return (

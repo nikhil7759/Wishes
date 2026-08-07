@@ -11,7 +11,7 @@ const CustomEvents: React.FC = () => {
         </span>
 
         <h2 className="font-jost text-3xl md:text-[40px] font-light text-[#5a4d41] leading-[0.9] mb-12 max-w-lg">
-          <span className="font-burgues text-[90px] sm:text-[110px] md:text-[145px]">O</span>ur Custom Creations<br /> <span className="font-burgues text-[65px] md:text-[60px]">F</span>or Your Events
+          <span className="font-burgues text-[90px] sm:text-[110px] md:text-[145px]">o</span>ur Custom Creations<br /> <span className="font-burgues text-[65px] md:text-[60px]">F</span>or Your Events
         </h2>
 
         <div className="flex flex-col sm:flex-row items-center gap-8 sm:gap-6">

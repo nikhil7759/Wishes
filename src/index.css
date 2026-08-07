@@ -43,7 +43,7 @@
 
 @font-face {
   font-family: 'Burgues Script';
-  src: url('/font/Burgues Script Regular.woff2') format('woff2');
+  src: url('/font/Burgues%20Script%20Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -59,7 +59,7 @@
 
 @font-face {
   font-family: 'At Flemish';
-  src: url('/font/At Flemish Script II Regular.woff2') format('woff2');
+  src: url('/font/At%20Flemish%20Script%20II%20Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;

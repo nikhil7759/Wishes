@@ -45,6 +45,8 @@ const FullScreenCarousel: React.FC = () => {
               alt={slide.title}
               className={`w-full h-full object-cover transition-transform duration-[7000ms] ease-out ${index === currentSlide ? 'scale-110' : 'scale-100'
                 }`}
+              loading={index === 0 ? 'eager' : 'lazy'}
+              decoding="async"
             />
             {/* Dark overlay for text readability */}
             <div className="absolute inset-0 bg-black/40"></div>

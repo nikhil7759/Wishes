@@ -56,26 +56,10 @@ const PremiumCollection: React.FC = () => {
 
         {/* Section Heading */}
         <div className="text-center mb-12">
-          <h2 className="font-jost font-light text-3xl md:text-[40px]  text-[#5a4d41]">
-            <span className="font-burgues text-[65px]">F</span>or Special Ocassions
+          <h2 className="font-jost font-light text-3xl md:text-[40px] text-[#5a4d41]">
+            <span className="font-burgues text-[65px]">F</span>or Special Occasions
           </h2>
         </div>
-
-        {/* Categories */}
-        {/* <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12 mb-12 overflow-x-auto whitespace-nowrap scrollbar-hide pb-2 md:pb-0">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`cursor-pointer uppercase text-[12px] md:text-[14px] tracking-[0.15em] transition-colors focus:outline-none ${activeCategory === category
-                ? 'text-[#5a4d41] font-medium'
-                : 'text-[#a39485] hover:text-[#5a4d41]'
-                }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div> */}
 
         {/* Collection Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4 lg:gap-6 mt-4">
@@ -95,6 +79,7 @@ const PremiumCollection: React.FC = () => {
                     alt={item.title}
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 mix-blend-multiply"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
 

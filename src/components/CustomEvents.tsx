@@ -11,7 +11,7 @@ const CustomEvents: React.FC = () => {
         </span>
 
         <h2 className="font-jost text-3xl md:text-[40px] font-light text-[#5a4d41] leading-[0.9] mb-12 max-w-lg">
-          <span className="font-burgues text-[90px] sm:text-[110px] md:text-[145px]">o</span>ur Custom Creations<br /> <span className="font-burgues text-[65px] md:text-[60px]">F</span>or Your Events
+          <span className="font-burgues text-[90px] sm:text-[110px] md:text-[145px]">O</span>ur Custom Creations<br /> <span className="font-burgues text-[65px] md:text-[60px]">F</span>or Your Events
         </h2>
 
         <div className="flex flex-col sm:flex-row items-center gap-8 sm:gap-6">
@@ -21,12 +21,6 @@ const CustomEvents: React.FC = () => {
           >
             View Catalog
           </a>
-          {/* <a
-            href="/contact"
-            className="text-[#b49377] hover:text-[#9a7b60] uppercase text-[10px] md:text-[11px] font-medium tracking-[0.15em] transition-colors"
-          >
-            Contact Us
-          </a> */}
         </div>
 
       </div>
@@ -42,6 +36,8 @@ const CustomEvents: React.FC = () => {
               src="/Images/WS-3.jpg"
               alt="Custom Event Cake"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div className="w-full aspect-[4/5] bg-[#f8f0e5] overflow-hidden group">
@@ -49,6 +45,8 @@ const CustomEvents: React.FC = () => {
               src="/Images/WS-6.jpg"
               alt="Gifting Collection"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
@@ -58,6 +56,8 @@ const CustomEvents: React.FC = () => {
               src="/Images/WS-7.jpg"
               alt="Artisanal Tart"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
@@ -68,6 +68,8 @@ const CustomEvents: React.FC = () => {
               src="/Images/WS-8.jpg"
               alt="Wedding Treats"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div className="w-full aspect-[4/5] bg-[#f8f0e5] overflow-hidden group">
@@ -75,6 +77,8 @@ const CustomEvents: React.FC = () => {
               src="/Images/WS-14.jpg"
               alt="Corporate Boxes"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
@@ -84,6 +88,8 @@ const CustomEvents: React.FC = () => {
               src="/Images/WS-15.jpg"
               alt="Special Sweets"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 

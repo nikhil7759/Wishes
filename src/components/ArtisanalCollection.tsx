@@ -87,6 +87,7 @@ const ArtisanalCollection: React.FC = () => {
                   alt={item.title}
                   className="w-[100%] h-[85%] object-contain transition-transform duration-700 ease-out group-hover:scale-110 drop-shadow-md"
                   loading="lazy"
+                  decoding="async"
                 />
 
                 {/* Decorative Heart near Image */}

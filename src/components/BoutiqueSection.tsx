@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 const BoutiqueSection: React.FC = () => {
   return (
     <section
-      className="relative w-full py-24 md: px-6 md:px-12 flex items-center justify-end min-h-[60vh] md:min-h-[75vh] bg-cover bg-center bg-no-repeat"
+      className="relative w-full py-24 px-6 md:px-12 flex items-center justify-end min-h-[60vh] md:min-h-[75vh] bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: "url('/Images/store image.png')",
+        backgroundImage: "url('/Images/store%20image.png')",
       }}
     >
       {/* Subtle overlay to enhance text readability */}

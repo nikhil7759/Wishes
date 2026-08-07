@@ -11,22 +11,22 @@ const ScrollToTop = () => {
     document.body.scrollTop = 0;
 
     // Reset Lenis smooth scroll if active
-    if (window.lenis) {
-      window.lenis.scrollTo(0, { immediate: true });
+    if ((window as any).lenis) {
+      (window as any).lenis.scrollTo(0, { immediate: true });
     }
 
     // Backup timers for async/lazy-loaded page elements
     const t1 = setTimeout(() => {
       window.scrollTo(0, 0);
-      if (window.lenis) {
-        window.lenis.scrollTo(0, { immediate: true });
+      if ((window as any).lenis) {
+        (window as any).lenis.scrollTo(0, { immediate: true });
       }
     }, 50);
 
     const t2 = setTimeout(() => {
       window.scrollTo(0, 0);
-      if (window.lenis) {
-        window.lenis.scrollTo(0, { immediate: true });
+      if ((window as any).lenis) {
+        (window as any).lenis.scrollTo(0, { immediate: true });
       }
     }, 150);
 
@@ -40,3 +40,4 @@ const ScrollToTop = () => {
 };
 
 export default ScrollToTop;
+

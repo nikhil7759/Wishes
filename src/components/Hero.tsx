@@ -5,10 +5,10 @@ const Hero: React.FC = () => {
     <section
       id="hero-section"
       className="relative w-full overflow-hidden bg-black font-jost h-[100vh]"
-
+      style={{ transform: 'translateZ(0)' }}
     >
       {/* Background Video */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0" style={{ transform: 'translateZ(0)' }}>
         <video
           autoPlay
           loop
@@ -50,6 +50,8 @@ const Hero: React.FC = () => {
               border: '1px solid rgba(255,255,255,0.25)',
               boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
               padding: 'clamp(28px, 4vw, 48px)',
+              transform: 'translateZ(0)',
+              willChange: 'transform',
             }}
           >
             <h1

@@ -216,11 +216,10 @@ const TopSellingSlider: React.FC = () => {
               setIsAnimating(true);
               setCurrentIndex(itemsPerPage + index);
             }}
-            className={`transition-all duration-300 rounded-full ${
-              activeDotIndex === index
+            className={`transition-all duration-300 rounded-full ${activeDotIndex === index
                 ? 'w-6 h-2 bg-[#b49377]'
                 : 'w-2 h-2 bg-[#b49377]/30 hover:bg-[#b49377]/60'
-            }`}
+              }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}

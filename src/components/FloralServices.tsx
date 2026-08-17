@@ -40,7 +40,7 @@ const FloralServices: React.FC = () => {
             {/* Interactive Call to Action */}
             <div className="mt-8">
               <a
-                href="/floral-services"
+                href="/contact"
                 className="inline-block bg-[#b49377] hover:bg-[#9a7b60] text-white uppercase text-[10px] md:text-[11px] font-medium tracking-[0.15em] px-10 py-4 transition-colors"
               >
                 Explore Services

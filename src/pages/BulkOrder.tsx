@@ -339,7 +339,7 @@ const BulkOrder: React.FC = () => {
                 🚚
               </div>
               <h4 className="font-jost text-[15px] font-medium text-[#1d2b45] uppercase tracking-wider mb-2">
-                Pan-India Shipping
+                Delhi-NCR Shipping
               </h4>
               <p className="font-jost font-light text-xs text-[#666] leading-relaxed">
                 Seamless multi-address dispatch across India with climate-safe packaging.

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const BuildYourBox: React.FC = () => {
   return (
@@ -72,12 +73,12 @@ const BuildYourBox: React.FC = () => {
 
         {/* Centered CTA Button */}
         <div className="flex justify-center mt-6">
-          <button
-            type="button"
+          <Link
+            to="/bulk-order"
             className="inline-block bg-[#b49377] hover:bg-[#9a7b60] text-white uppercase text-[10px] md:text-[11px] font-medium tracking-[0.15em] px-10 py-4 transition-colors"
           >
             Sign Me Up
-          </button>
+          </Link>
         </div>
 
       </div>

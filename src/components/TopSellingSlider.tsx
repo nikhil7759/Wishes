@@ -13,9 +13,9 @@ const items: SliderItem[] = [
   { id: 3, title: 'Corporate Luxury Basket', imageUrl: '/Images/pic3.jpg', link: '/corporate-special' },
   { id: 4, title: 'Anniversary Gift Box', imageUrl: '/Images/pic4.jpg', link: '/anniversary-special' },
   { id: 5, title: 'Royal Dry Fruit Gift Hamper', imageUrl: '/Images/pic5.jpg', link: '/wedding-special' },
-  { id: 6, title: 'Kaju Katli Special', imageUrl: '/Images/pic6.jpg', link: '/birthday-wishes' },
-  { id: 7, title: 'Deluxe Celebrations Assortment', imageUrl: '/Images/pic7.jpg', link: '/corporate-special' },
-  { id: 8, title: 'Classic Premium Hamper', imageUrl: '/Images/pic8.jpg', link: '/anniversary-special' },
+  // { id: 6, title: 'Kaju Katli Special', imageUrl: '/Images/pic6.jpg', link: '/birthday-wishes' },
+  // { id: 7, title: 'Deluxe Celebrations Assortment', imageUrl: '/Images/pic7.jpg', link: '/corporate-special' },
+  // { id: 8, title: 'Classic Premium Hamper', imageUrl: '/Images/pic8.jpg', link: '/anniversary-special' },
 ];
 
 const TopSellingSlider: React.FC = () => {
@@ -218,8 +218,8 @@ const TopSellingSlider: React.FC = () => {
               setCurrentIndex(itemsPerPage + index);
             }}
             className={`transition-all duration-300 rounded-full ${activeDotIndex === index
-                ? 'w-6 h-2 bg-[#b49377]'
-                : 'w-2 h-2 bg-[#b49377]/30 hover:bg-[#b49377]/60'
+              ? 'w-6 h-2 bg-[#b49377]'
+              : 'w-2 h-2 bg-[#b49377]/30 hover:bg-[#b49377]/60'
               }`}
             aria-label={`Go to slide ${index + 1}`}
           />

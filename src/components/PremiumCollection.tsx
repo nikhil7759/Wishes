@@ -15,28 +15,28 @@ const collections: CollectionItem[] = [
     title: 'Wedding Special',
     subtitle: 'Starting at ₹1,500',
     imageUrl: '/Images/collection5.jpg',
-    link: '/wedding-special',
+    link: 'https://airmenus.in/wishes/order',
   },
   {
     id: 2,
     title: 'Birthday Wishes',
     subtitle: 'Starting at ₹850',
     imageUrl: '/Images/collection6.jpg',
-    link: '/birthday-wishes',
+    link: 'https://airmenus.in/wishes/order',
   },
   {
     id: 3,
     title: 'Corporate Special',
     subtitle: 'Starting at ₹2,200',
     imageUrl: '/Images/collection7.jpg',
-    link: '/corporate-special',
+    link: 'https://airmenus.in/wishes/order',
   },
   {
     id: 4,
     title: 'Anniversary Special',
     subtitle: 'Starting at ₹1,800',
     imageUrl: '/Images/collection2.jpg',
-    link: '/anniversary-special',
+    link: 'https://airmenus.in/wishes/order',
   },
 ];
 
@@ -59,9 +59,11 @@ const PremiumCollection: React.FC = () => {
               className="relative group transition-transform duration-300 ease-out hover:-translate-y-2 h-[420px] sm:h-[600px]"
               style={{ willChange: 'transform', transform: 'translateZ(0)' }}
             >
-              <Link
-                to={item.link}
-                className="flex flex-col items-center justify-start focus:outline-none bg-[#eabfb9] pb-12 h-full w-full"
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center justify-start focus:outline-none bg-[#eabfb9] pb-12 h-full w-full cursor-pointer"
                 style={{
                   clipPath:
                     'polygon(0 0, 100% 0, 100% calc(100% - 30px), 50% 100%, 0 calc(100% - 30px))',
@@ -84,7 +86,7 @@ const PremiumCollection: React.FC = () => {
                 <h4 className="font-jost font-light text-[14px] sm:text-[15px] capitalize text-center text-[#000] px-4 mt-auto leading-tight">
                   {item.title}
                 </h4>
-              </Link>
+              </a>
             </div>
           ))}
         </div>

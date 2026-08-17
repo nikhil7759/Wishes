@@ -39,7 +39,7 @@ const ContactPage: React.FC = () => {
 
       {/* ── Studios ── */}
       <section className="contact-studios-section">
-        <div className="max-w-6xl mx-auto px-6 md:px-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Section label */}
           <div className="flex items-center gap-5 mb-12">
@@ -48,7 +48,7 @@ const ContactPage: React.FC = () => {
             <span className="contact-section-rule" />
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-7">
 
             {/* Studio 1 */}
             <div className="sc-card group">
@@ -101,9 +101,48 @@ const ContactPage: React.FC = () => {
               <div className="sc-num">02</div>
               <div className="sc-overlay" />
 
+
+              <div className="sc-content">
+                <p className="sc-eyebrow">New Delhi</p>
+                <h2 className="sc-name">Studio Two</h2>
+                <p className="sc-address">
+                  DLF Avenue Mall, Central Atrium, <br />
+                  Ground Floor, Saket, New Delhi, Delhi &ndash; 110017
+                </p>
+
+                <div className="sc-drawer">
+                  <div className="sc-drawer-inner">
+                    <a href="tel:+919289714461" className="sc-action-btn">
+                      <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.48-4.18-7.076-7.076l1.293-.97c.362-.271.527-.733.417-1.173L6.963 3.102A1.125 1.125 0 0 0 5.872 2.25H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25z" />
+                      </svg>
+                      +91‑92897 14461
+                    </a>
+                    <a
+                      href="https://maps.app.goo.gl/hzw5xJHdzoFfzRn9A"
+                      target="_blank" rel="noopener noreferrer"
+                      className="sc-action-btn sc-action-gold"
+                    >
+                      <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0z" />
+                      </svg>
+                      Get Directions
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Studio 3 */}
+            <div className="sc-card group">
+              <img src="/Images/store image.png" alt="Faridabad Studio" className="sc-img" loading="lazy" decoding="async" />
+              <div className="sc-num">03</div>
+              <div className="sc-overlay" />
+
               <div className="sc-content">
                 <p className="sc-eyebrow">Faridabad</p>
-                <h2 className="sc-name">Studio Two</h2>
+                <h2 className="sc-name">Studio Three</h2>
                 <p className="sc-address">
                   54b, Ground Floor, Omaxe World Street,<br />
                   Sector 79, Faridabad &ndash; 121004
@@ -111,11 +150,11 @@ const ContactPage: React.FC = () => {
 
                 <div className="sc-drawer">
                   <div className="sc-drawer-inner">
-                    <a href="tel:+917428593716" className="sc-action-btn">
+                    <a href="tel:+919289714461" className="sc-action-btn">
                       <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.48-4.18-7.076-7.076l1.293-.97c.362-.271.527-.733.417-1.173L6.963 3.102A1.125 1.125 0 0 0 5.872 2.25H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25z" />
                       </svg>
-                      +91‑74285 93716
+                      +91‑92897 14461
                     </a>
                     <a
                       href="https://maps.google.com/?q=54b+Ground+Floor+Omaxe+World+Street+Sector+79+Faridabad"
@@ -216,7 +255,7 @@ const ContactPage: React.FC = () => {
           position: absolute;
           bottom: 0; left: 0; right: 0;
           z-index: 4;
-          padding: 0 28px 28px;
+          padding: 0 20px 24px;
         }
         .sc-eyebrow {
           font-family: 'Jost', sans-serif;
@@ -227,19 +266,18 @@ const ContactPage: React.FC = () => {
           margin-bottom: 6px;
         }
         .sc-name {
-          
-          font-size: clamp(2rem, 4vw, 2rem);
+          font-size: clamp(1.4rem, 2vw, 1.8rem);
           font-weight: 300;
           color: #f5ede0;
-          line-height: 1.1;
-          margin-bottom: 10px;
+          line-height: 1.15;
+          margin-bottom: 8px;
         }
         .sc-address {
           font-family: 'Jost', sans-serif;
           font-weight: 300;
-          font-size: 13px;
-          color: rgba(245,237,224,0.65);
-          line-height: 1.75;
+          font-size: 12.5px;
+          color: rgba(245,237,224,0.7);
+          line-height: 1.65;
           margin-bottom: 0;
         }
 
@@ -249,7 +287,7 @@ const ContactPage: React.FC = () => {
           max-height: 0;
           transition: max-height 0.48s cubic-bezier(.22,1,.36,1);
         }
-        .sc-card:hover .sc-drawer { max-height: 90px; }
+        .sc-card:hover .sc-drawer { max-height: 120px; }
         .sc-drawer-inner {
           display: flex;
           gap: 10px;

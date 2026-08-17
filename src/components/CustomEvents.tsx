@@ -16,7 +16,7 @@ const CustomEvents: React.FC = () => {
 
         <div className="flex flex-col sm:flex-row items-center gap-8 sm:gap-6">
           <a
-            href="/catalog"
+            href="/shop"
             className="bg-[#b49377] hover:bg-[#9a7b60] text-white uppercase text-[10px] md:text-[11px] font-medium tracking-[0.15em] px-10 py-4 transition-colors"
           >
             View Catalog

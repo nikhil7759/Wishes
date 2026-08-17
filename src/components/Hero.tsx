@@ -1,20 +1,51 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const Hero: React.FC = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    // Respect users who prefer reduced motion: keep the video paused (poster frame shows)
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      video.pause();
+      return;
+    }
+
+    // Pause the video when scrolled out of view to save decode/GPU work
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.05 },
+    );
+    observer.observe(video);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
       id="hero-section"
-      className="relative w-full overflow-hidden bg-black font-jost h-[100vh]"
+      className="relative w-full overflow-hidden bg-black font-jost h-[100svh]"
       style={{ transform: 'translateZ(0)' }}
     >
       {/* Background Video */}
       <div className="absolute inset-0" style={{ transform: 'translateZ(0)' }}>
         <video
+          ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
           preload="auto"
+          poster="/Images/bgwishes1.jpg"
+          aria-hidden="true"
           className="w-full h-full object-cover"
         >
           <source src="/Images/Sweets.mp4" type="video/mp4" />
@@ -43,15 +74,15 @@ const Hero: React.FC = () => {
           <div
             className="relative max-w-lg"
             style={{
-              background: 'rgba(255,255,255,0.18)',
-              backdropFilter: 'blur(20px)',
-              WebkitBackdropFilter: 'blur(20px)',
+              background: 'rgba(255,255,255,0.26)',
+              backdropFilter: 'blur(10px)',
+              WebkitBackdropFilter: 'blur(10px)',
               borderRadius: '24px',
               border: '1px solid rgba(255,255,255,0.25)',
               boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
               padding: 'clamp(28px, 4vw, 48px)',
               transform: 'translateZ(0)',
-              willChange: 'transform',
+              willChange: 'transform, backdrop-filter',
             }}
           >
             <h1

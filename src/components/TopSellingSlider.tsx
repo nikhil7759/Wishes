@@ -154,6 +154,7 @@ const TopSellingSlider: React.FC = () => {
               transform: `translate3d(-${(currentIndex / extendedItems.length) * 100}%, 0, 0)`,
               transition: isAnimating ? 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)' : 'none',
               width: `${(extendedItems.length / itemsPerPage) * 100}%`,
+              willChange: 'transform',
             }}
             onTransitionEnd={handleTransitionEnd}
           >

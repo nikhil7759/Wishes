@@ -55,7 +55,8 @@ const FullScreenCarousel: React.FC = () => {
                 src={slide.image}
                 alt={slide.title}
                 className="w-full h-full object-cover object-center"
-                loading={index === 0 ? 'eager' : 'lazy'}
+                loading="eager"
+                fetchPriority={index === 0 ? 'high' : 'auto'}
                 decoding="async"
               />
               <div className="absolute inset-0 bg-black/45" />

@@ -50,7 +50,7 @@ const FloralServices: React.FC = () => {
 
           {/* RIGHT COLUMN: LARGE IMAGE */}
           <div className="md:col-span-6 flex justify-center items-center animate-float">
-            <div className="relative w-80 h-80 sm:w-96 sm:h-96 md:w-full md:aspect-square max-w-[480px] lg:max-w-[500px] overflow-hidden bg-[#f8f0e5]/10 group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow duration-500 ">
+            <div className="relative w-80 h-80 sm:w-96 sm:h-96 md:w-full md:aspect-square max-w-[480px] lg:max-w-[500px] overflow-hidden bg-[#f8f0e5]/10 group cursor-pointer shadow-lg">
               {/* Soft border overlay for visual depth */}
               <div className="absolute inset-0 pointer-events-none z-10" />
 

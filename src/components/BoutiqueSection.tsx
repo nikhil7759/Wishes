@@ -16,13 +16,14 @@ const BoutiqueSection: React.FC = () => {
       <div
         className="relative z-10 w-full max-w-xl md:mr-16 flex flex-col items-start text-left select-none"
         style={{
-          background: 'rgba(255,255,255,0.18)',
-          backdropFilter: 'blur(20px)',
-          WebkitBackdropFilter: 'blur(20px)',
+          background: 'rgba(255,255,255,0.26)',
+          backdropFilter: 'blur(10px)',
+          WebkitBackdropFilter: 'blur(10px)',
           borderRadius: '24px',
           border: '1px solid rgba(255,255,255,0.25)',
           boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
           padding: 'clamp(28px, 4vw, 48px)',
+          willChange: 'backdrop-filter',
         }}
       >
 

@@ -35,7 +35,7 @@ const BoutiqueSection: React.FC = () => {
         {/* Narrative Description */}
         <div className="space-y-4 font-jost font-light text-[15px] md:text-[16px] leading-relaxed text-[#fbede3] py-2">
           <p>
-            Wishes by Om Sweets invites you to step inside our boutique and experience the magic of luxury gifting first-hand. Located in the heart of West London, our boutique is a sensory haven featuring a beautifully curated collection of premium sweets, custom-crafted hampers, and stunning floral arrangements.
+            Wishes by Om Sweets invites you to step inside our boutique and experience the magic of luxury gifting first-hand. Our boutique is a sensory haven featuring a beautifully curated collection of premium sweets, custom-crafted hampers, and stunning floral arrangements.
           </p>
 
         </div>

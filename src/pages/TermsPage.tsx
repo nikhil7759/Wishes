@@ -7,7 +7,7 @@ const termsData = [
     title: 'Acceptance of Terms',
     content: (
       <p className="text-sm md:text-base text-[#6b5a4e] leading-relaxed font-light">
-        By using the WishesIndia website or making a purchase from us, you accept and agree to these Terms &amp; Conditions. If you do not agree to these terms, you must refrain from using the site.
+        By using the Wishes website or making a purchase from us, you accept and agree to these Terms &amp; Conditions. If you do not agree to these terms, you must refrain from using the site.
       </p>
     )
   },
@@ -16,7 +16,7 @@ const termsData = [
     title: 'Changes to Terms',
     content: (
       <p className="text-sm md:text-base text-[#6b5a4e] leading-relaxed font-light">
-        WishesIndia reserves the right to modify or update these Terms &amp; Conditions at any time. Any changes will be posted on this page, and the updated terms will take effect immediately upon posting. It is your responsibility to review this page regularly to stay informed of any changes.
+        Wishes reserves the right to modify or update these Terms &amp; Conditions at any time. Any changes will be posted on this page, and the updated terms will take effect immediately upon posting. It is your responsibility to review this page regularly to stay informed of any changes.
       </p>
     )
   },
@@ -27,7 +27,7 @@ const termsData = [
       <div className="space-y-4 text-sm md:text-base text-[#6b5a4e] font-light leading-relaxed">
         <div>
           <strong className="font-medium text-[#2c1f18] block mb-1">Product Availability:</strong>
-          All products and services offered on the WishesIndia website are subject to availability. We reserve the right to limit the quantity of products available for purchase or to discontinue any product at our discretion.
+          All products and services offered on the Wishes website are subject to availability. We reserve the right to limit the quantity of products available for purchase or to discontinue any product at our discretion.
         </div>
         <div>
           <strong className="font-medium text-[#2c1f18] block mb-1">Product Descriptions:</strong>
@@ -98,7 +98,7 @@ const termsData = [
     title: 'User Conduct',
     content: (
       <div className="space-y-3 text-sm md:text-base text-[#6b5a4e] font-light leading-relaxed">
-        <p>When using the WishesIndia website, you agree to the following:</p>
+        <p>When using the Wishes website, you agree to the following:</p>
         <ul className="list-disc pl-5 space-y-2">
           <li>You will not use the site for any unlawful purpose or in any way that violates these Terms &amp; Conditions.</li>
           <li>You will not engage in any activity that may interfere with the operation of the website or compromise its security.</li>
@@ -114,11 +114,11 @@ const termsData = [
       <div className="space-y-4 text-sm md:text-base text-[#6b5a4e] font-light leading-relaxed">
         <div>
           <strong className="font-medium text-[#2c1f18] block mb-1">Copyright:</strong>
-          All content on the WishesIndia website, including text, images, logos, graphics, and product designs, is owned by WishesIndia or its licensors and is protected by copyright law. You may not use, reproduce, or distribute any content from the website without our express permission.
+          All content on the Wishes website, including text, images, logos, graphics, and product designs, is owned by Wishes or its licensors and is protected by copyright law. You may not use, reproduce, or distribute any content from the website without our express permission.
         </div>
         <div>
           <strong className="font-medium text-[#2c1f18] block mb-1">Trademarks:</strong>
-          The WishesIndia name and logo, as well as any product names and logos, are trademarks of WishesIndia. These trademarks may not be used without permission.
+          The Wishes name and logo, as well as any product names and logos, are trademarks of Wishes. These trademarks may not be used without permission.
         </div>
       </div>
     )
@@ -128,7 +128,7 @@ const termsData = [
     title: 'Limitation of Liability',
     content: (
       <p className="text-sm md:text-base text-[#6b5a4e] leading-relaxed font-light">
-        To the maximum extent permitted by law, WishesIndia shall not be held liable for any damages, losses, or expenses arising from the use or inability to use our website or products, including but not limited to direct, indirect, incidental, or consequential damages.
+        To the maximum extent permitted by law, Wishes   shall not be held liable for any damages, losses, or expenses arising from the use or inability to use our website or products, including but not limited to direct, indirect, incidental, or consequential damages.
       </p>
     )
   },
@@ -137,7 +137,7 @@ const termsData = [
     title: 'Indemnification',
     content: (
       <p className="text-sm md:text-base text-[#6b5a4e] leading-relaxed font-light">
-        You agree to indemnify and hold harmless WishesIndia, its affiliates, employees, and partners from any claims, damages, or expenses arising from your use of the website or violation of these Terms &amp; Conditions.
+        You agree to indemnify and hold harmless Wishes, its affiliates, employees, and partners from any claims, damages, or expenses arising from your use of the website or violation of these Terms &amp; Conditions.
       </p>
     )
   },
@@ -146,7 +146,7 @@ const termsData = [
     title: 'Privacy',
     content: (
       <p className="text-sm md:text-base text-[#6b5a4e] leading-relaxed font-light">
-        Your use of the WishesIndia website is also governed by our <a href="/privacy" className="text-[#b49377] underline hover:text-[#9a7b60] transition-colors">Privacy Policy</a>, which outlines how we collect, use, and protect your personal information. Please review our Privacy Policy for more information.
+        Your use of the Wishes website is also governed by our <a href="/privacy" className="text-[#b49377] underline hover:text-[#9a7b60] transition-colors">Privacy Policy</a>, which outlines how we collect, use, and protect your personal information. Please review our Privacy Policy for more information.
       </p>
     )
   },
@@ -166,7 +166,7 @@ const TermsPage: React.FC = () => {
     <div className="bg-[#f8f0e5] min-h-screen pt-20 md:pt-24 pb-24 font-jost select-none">
       <SEO
         title="Terms & Conditions | Wishes by Om Sweets"
-        description="Read the official Terms & Conditions governing the use of WishesIndia website and purchases from our online luxury store."
+        description="Read the official Terms & Conditions governing the use of Wishes website and purchases from our online luxury store."
       />
 
       {/* Signature Blush Pink Hero Banner */}
@@ -179,7 +179,7 @@ const TermsPage: React.FC = () => {
             erms &amp; Conditions
           </h1>
           <p className="font-jost text-[14px] md:text-[16px] text-black/80 font-light leading-relaxed max-w-2xl mx-auto tracking-wide mt-4">
-            These Terms &amp; Conditions govern the use of the WishesIndia website and the purchase of products from our online store. By accessing or using our website, you agree to comply with and be bound by these terms. Please read them carefully.
+            These Terms &amp; Conditions govern the use of the Wishes website and the purchase of products from our online store. By accessing or using our website, you agree to comply with and be bound by these terms. Please read them carefully.
           </p>
         </div>
 

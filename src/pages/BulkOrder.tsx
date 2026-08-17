@@ -143,7 +143,7 @@ const BulkOrder: React.FC = () => {
 
           {/* Subtitle / Narrative Intro */}
           <p className="font-jost text-[15px] md:text-[17px] text-black/85 font-light leading-relaxed max-w-[960px] mx-auto tracking-wide">
-            At <strong className="font-medium text-black">WishesIndia</strong>, we believe that every celebration deserves a touch of sweetness and sophistication. Whether it's a corporate milestone, festive gifting, or a grand event, our handcrafted luxury sweets and hampers are designed to leave a lasting impression. At WishesIndia, we don't just deliver sweets — we deliver emotions wrapped in luxury.
+            At <strong className="font-medium text-black">Wishes</strong>, we believe that every celebration deserves a touch of sweetness and sophistication. Whether it's a corporate milestone, festive gifting, or a grand event, our handcrafted luxury sweets and hampers are designed to leave a lasting impression. At Wishes, we don't just deliver sweets — we deliver emotions wrapped in luxury.
           </p>
 
         </div>

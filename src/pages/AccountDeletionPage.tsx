@@ -5,7 +5,7 @@ const steps = [
   {
     step: '01',
     title: 'Open the Website',
-    description: 'Locate the WishesIndia website or mobile application on your device and tap to open it.'
+    description: 'Locate the Wishes website or mobile application on your device and tap to open it.'
   },
   {
     step: '02',
@@ -39,7 +39,7 @@ const AccountDeletionPage: React.FC = () => {
     <div className="bg-[#f8f0e5] min-h-screen pt-20 md:pt-24 pb-24 font-jost select-none">
       <SEO
         title="Account Deletion Policy | Wishes by Om Sweets"
-        description="Learn about the account deletion process at WishesIndia, data retention guidelines, and step-by-step instructions to delete your account."
+        description="Learn about the account deletion process at Wishes, data retention guidelines, and step-by-step instructions to delete your account."
       />
 
       {/* Signature Blush Pink Hero Banner */}

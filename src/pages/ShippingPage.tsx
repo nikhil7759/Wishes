@@ -76,7 +76,7 @@ const shippingData = [
     title: 'Delays & Exceptions',
     content: (
       <p className="text-sm md:text-base text-[#6b5a4e] leading-relaxed font-light">
-        WishesIndia will not be held liable for delays caused due to external factors including weather, strikes, natural calamities, or service provider disruptions. We will keep you informed in case of any unexpected delays.
+        Wishes will not be held liable for delays caused due to external factors including weather, strikes, natural calamities, or service provider disruptions. We will keep you informed in case of any unexpected delays.
       </p>
     )
   },
@@ -105,7 +105,7 @@ const ShippingPage: React.FC = () => {
     <div className="bg-[#f8f0e5] min-h-screen pt-20 md:pt-24 pb-24 font-jost select-none">
       <SEO
         title="Shipping & Delivery Policy | Wishes by Om Sweets"
-        description="Review our Shipping & Delivery Policy to understand delivery timeframes, pin code coverage, slots, charges, and packaging standards at WishesIndia."
+        description="Review our Shipping & Delivery Policy to understand delivery timeframes, pin code coverage, slots, charges, and packaging standards at Wishes."
       />
 
       {/* Signature Blush Pink Hero Banner */}
@@ -118,7 +118,7 @@ const ShippingPage: React.FC = () => {
             hipping &amp; Delivery Policy
           </h1>
           <p className="font-jost text-[14px] md:text-[16px] text-black/80 font-light leading-relaxed max-w-2xl mx-auto tracking-wide mt-4">
-            At WishesIndia, we aim to ensure timely and safe delivery of your orders. This Shipping &amp; Delivery Policy outlines how and when your items will be delivered once you place an order through our website.
+            At Wishes, we aim to ensure timely and safe delivery of your orders. This Shipping &amp; Delivery Policy outlines how and when your items will be delivered once you place an order through our website.
           </p>
         </div>
 

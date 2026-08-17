@@ -96,7 +96,7 @@ const cancellationData = [
     title: 'Exchange Policy',
     content: (
       <p className="text-sm md:text-base text-[#6b5a4e] leading-relaxed font-light">
-        We do not offer exchanges for products purchased from WishesIndia. If you are unsatisfied with your order, please refer to our refund policy for assistance.
+        We do not offer exchanges for products purchased from Wishes. If you are unsatisfied with your order, please refer to our refund policy for assistance.
       </p>
     )
   },
@@ -116,7 +116,7 @@ const CancellationPage: React.FC = () => {
     <div className="bg-[#f8f0e5] min-h-screen pt-20 md:pt-24 pb-24 font-jost select-none">
       <SEO
         title="Cancellation & Refund Policy | Wishes by Om Sweets"
-        description="Understand our Cancellation & Refund Policy, return requirements, refund timelines, and eligibility criteria at WishesIndia."
+        description="Understand our Cancellation & Refund Policy, return requirements, refund timelines, and eligibility criteria at Wishes."
       />
 
       {/* Signature Blush Pink Hero Banner */}

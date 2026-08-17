@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
 
             {/* Brand Description */}
             <p className="font-jost font-light text-[14px] md:text-[15px] leading-relaxed text-black max-w-md">
-              Indulge in luxury with every bite at WishesIndia, where tradition meets exquisite taste. Our handcrafted sweets are made with the finest ingredients, perfect for every occasion.
+              Indulge in luxury with every bite at Wishes, where tradition meets exquisite taste. Our handcrafted sweets are made with the finest ingredients, perfect for every occasion.
             </p>
 
             {/* Contact Information */}

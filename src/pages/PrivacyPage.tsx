@@ -74,7 +74,7 @@ const PrivacyPage: React.FC = () => {
     <div className="bg-[#f8f0e5] min-h-screen pt-20 md:pt-24 pb-24 font-jost select-none">
       <SEO
         title="Privacy Policy | Wishes by Om Sweets"
-        description="Learn how WishesIndia collects, uses, and safeguards your personal data when you use our website or purchase luxury gifts and sweets."
+        description="Learn how Wishes collects, uses, and safeguards your personal data when you use our website or purchase luxury gifts and sweets."
       />
 
       {/* Signature Blush Pink Hero Banner */}
@@ -87,7 +87,7 @@ const PrivacyPage: React.FC = () => {
             rivacy Policy
           </h1>
           <p className="font-jost text-[14px] md:text-[16px] text-black/80 font-light leading-relaxed max-w-2xl mx-auto tracking-wide mt-4">
-            At WishesIndia, we value your privacy and are committed to protecting the personal information you share with us. This Privacy Policy outlines the types of information we collect, how we use it, and how we safeguard your data. By accessing or using our website or services, you agree to the practices described in this policy.
+            At Wishes, we value your privacy and are committed to protecting the personal information you share with us. This Privacy Policy outlines the types of information we collect, how we use it, and how we safeguard your data. By accessing or using our website or services, you agree to the practices described in this policy.
           </p>
         </div>
 
